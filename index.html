@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Movie Comics</title>
+    <link rel="stylesheet" href="dist/spectre.min.css">
+    <link rel="stylesheet" href="dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="dist/spectre-icons.min.css">
+  </head>
+  <body>
+    <section class="container">
+      <div class="columns">
+        <div class="column col-12">
+          <h2 class="text-center">Guess</h2>
+        </div>
+
+        <!-- Image  -->
+        <div class="column col-12">
+          <h3 class="text-center" id="true-title">...</h3>
+          <div class="column col-6 col-mx-auto">
+            <img src="img/0.jpg" style="max-height:500px" class="img-responsive" id="movie-pic" alt="...">
+          </div>
+          <div class="column col-4 col-mx-auto mt-2">
+            <div class="form-group">
+              <input class="form-input input-lg" type="text" id="movie-title" placeholder="Movie title">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  <!-- <script src="data.json" charset="utf-8"></script> -->
+  <script src="js/lodash.min.js" charset="utf-8"></script>
+  <script src="js/compare-strings.js" charset="utf-8"></script>
+
+  <script type="text/javascript">
+    "use strict";
+    function ready(fn) {
+      if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+        fn();
+      } else {
+        document.addEventListener('DOMContentLoaded', fn);
+      }
+    }
+    var movies;
+
+    // from https://codepen.io/KryptoniteDove/post/load-json-file-locally-using-pure-javascript
+    function loadJSON(callback) {
+
+      let xobj = new XMLHttpRequest();
+      xobj.overrideMimeType("application/json");
+      xobj.open('GET', 'data.json', true); // Replace 'my_data' with the path to your file
+      xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+          // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+          callback(xobj.responseText);
+        }
+      };
+      xobj.send(null);
+    }
+
+
+    ready(function () {
+
+      loadJSON(function(response) {
+        // Parse JSON string into object
+        let movies = JSON.parse(response).movies;
+
+        let title_input = document.getElementById('movie-title');
+        title_input.focus();
+        let image = document.getElementById('movie-pic');
+        let current_idx = -1;
+        const MIN_SIMILARITY = 0.8;
+        let true_title = document.getElementById('true-title');
+
+        function update()
+        {
+          current_idx += 1;
+          if (current_idx >= movies.length) {
+              current_idx = 0;
+          }
+          image.src = movies[current_idx].image;
+          true_title.textContent = movies[current_idx].names[0];
+        }
+        update();
+
+        title_input.addEventListener('keyup', _.debounce(function(e){
+          let guess = title_input.value.toLowerCase();
+          for (let i = 0; i < movies[current_idx].names.length; i++)
+          {
+            let name = movies[current_idx].names[i].toLowerCase();
+            let similarity = compareTwoStrings(guess, name);
+            if (similarity > MIN_SIMILARITY)
+            {
+              update();
+              break;
+            }
+          }
+        }, 350));
+      });
+
+    });
+
+  </script>
+  </body>
+</html>
