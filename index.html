@@ -57,6 +57,9 @@
 
     const MIN_SIMILARITY = 0.81;
 
+    let get_url = window.location;
+    let base_url = get_url .protocol + "//" + get_url.host + "/" + get_url.pathname.split('/')[1];
+
     function ready(fn) {
       if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
         fn();
@@ -71,10 +74,11 @@
 
       let xobj = new XMLHttpRequest();
       xobj.overrideMimeType("application/json");
-      xobj.open('GET', 'data.json', true); // Replace 'my_data' with the path to your file
+      xobj.open('GET', 'data.json', true);
       xobj.onreadystatechange = function () {
         if (xobj.readyState == 4 && xobj.status == "200") {
-          // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+          // Required use of an anonymous callback as .open
+          // will NOT return a value but simply returns undefined in asynchronous mode
           callback(xobj.responseText);
         }
       };
@@ -142,7 +146,12 @@
         if (current_idx >= movies.length) {
             current_idx = 0;
         }
-        image.src = movies[current_idx].image;
+        let image_src = movies[current_idx].image;
+        if (base_url.startsWith('http'))
+        {
+          image_src = base_url + image_src;
+        }
+        image.src = image_src;
         true_title.textContent = movies[current_idx].names[0];
       }
 
