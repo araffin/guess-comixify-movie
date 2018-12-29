@@ -56,6 +56,7 @@
     "use strict";
 
     const MIN_SIMILARITY = 0.81;
+    const MEDIA_URL = 'https://media.githubusercontent.com/media/araffin/guess-comixify-movie/master/';
 
     let get_url = window.location;
     let base_url = get_url .protocol + "//" + get_url.host + "/" + get_url.pathname.split('/')[1];
@@ -147,9 +148,9 @@
             current_idx = 0;
         }
         let image_src = movies[current_idx].image;
-        if (base_url.startsWith('http'))
+        if (base_url.startsWith('https://araffin.github.io'))
         {
-          image_src = base_url + '/' + image_src;
+          image_src = MEDIA_URL + image_src;
         }
         image.src = image_src;
         true_title.textContent = movies[current_idx].names[0];
