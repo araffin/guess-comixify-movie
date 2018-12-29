@@ -149,7 +149,7 @@
         let image_src = movies[current_idx].image;
         if (base_url.startsWith('http'))
         {
-          image_src = base_url + image_src;
+          image_src = base_url + '/' + image_src;
         }
         image.src = image_src;
         true_title.textContent = movies[current_idx].names[0];
