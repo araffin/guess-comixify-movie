@@ -10,20 +10,38 @@
   <body>
     <section class="container">
       <div class="columns">
-        <div class="column col-12">
-          <h2 class="text-center">Guess</h2>
+        <!-- Image  -->
+        <div class="columns col-12">
+          <div class="column col-12 col-mx-auto">
+            <h3 class="text-center">Which movie is it?</h3>
+          </div>
+
+          <div class="column col-6 col-mx-auto">
+            <img src="img/0.jpg" style="height:600px" class="img-responsive" id="movie-pic" alt="...">
+          </div>
         </div>
 
-        <!-- Image  -->
-        <div class="column col-12">
-          <h3 class="text-center" id="true-title">...</h3>
-          <div class="column col-6 col-mx-auto">
-            <img src="img/0.jpg" style="max-height:500px" class="img-responsive" id="movie-pic" alt="...">
-          </div>
-          <div class="column col-4 col-mx-auto mt-2">
-            <div class="form-group">
-              <input class="form-input input-lg" type="text" id="movie-title" placeholder="Movie title">
+        <div class="columns col-12">
+          <div class="columns col-6 col-mx-auto">
+            <div class="column col-2 mt-2">
+              <a id="reveal" href="#" class="btn btn-lg">
+                Answer
+              </a>
             </div>
+
+            <div class="column col-8 mt-2">
+              <div class="form-group" id='movie-input-group'>
+                <input class="form-input input-lg" type="text" id="movie-title" placeholder="Movie title">
+                <p id='answer' class="form-input-hint d-hide">Answer: <span id='true-title'>Apocalypse Now</span></p>
+              </div>
+            </div>
+
+            <div class="column col-2 mt-2">
+              <a id="next" href="#" class="btn btn-primary btn-lg">
+                Next <i class="icon icon-arrow-right"></i>
+              </a>
+            </div>
+
           </div>
         </div>
 
@@ -36,6 +54,9 @@
 
   <script type="text/javascript">
     "use strict";
+
+    const MIN_SIMILARITY = 0.81;
+
     function ready(fn) {
       if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
         fn();
@@ -43,7 +64,7 @@
         document.addEventListener('DOMContentLoaded', fn);
       }
     }
-    var movies;
+
 
     // from https://codepen.io/KryptoniteDove/post/load-json-file-locally-using-pure-javascript
     function loadJSON(callback) {
@@ -62,42 +83,105 @@
 
 
     ready(function () {
+      let answer = document.getElementById('answer');
+      let reveal = document.getElementById('reveal');
+      let title_input = document.getElementById('movie-title');
+      let form_group = document.getElementById('movie-input-group');
+      let image = document.getElementById('movie-pic');
+      let true_title = document.getElementById('true-title');
+      let next_button = document.getElementById('next');
+      let current_idx = -1;
+      let movies;
+
+      function hide(el){
+        if (!el.classList.contains('d-hide'))
+        {
+          el.classList.add('d-hide');
+        }
+      }
+
+      function show(el){
+        if (el.classList.contains('d-hide'))
+        {
+          el.classList.remove('d-hide');
+        }
+      }
+
+      function resetState() {
+        if (form_group.classList.contains('has-error'))
+        {
+          form_group.classList.remove('has-error');
+        }
+        if (form_group.classList.contains('has-success'))
+        {
+          form_group.classList.remove('has-success');
+        }
+
+      }
+
+      function success()
+      {
+        if (!form_group.classList.contains('has-success'))
+        {
+          form_group.classList.add('has-success');
+        }
+        show(answer);
+      }
+
+      function failure() {
+        if (!form_group.classList.contains('has-error'))
+        {
+          form_group.classList.add('has-error');
+        }
+      }
+
+      function update()
+      {
+        hide(answer);
+        current_idx += 1;
+        if (current_idx >= movies.length) {
+            current_idx = 0;
+        }
+        image.src = movies[current_idx].image;
+        true_title.textContent = movies[current_idx].names[0];
+      }
+
+      title_input.addEventListener('keyup', _.debounce(function(e){
+        let guess = title_input.value.toLowerCase();
+        let successful_trial = false;
+        resetState();
+        for (let i = 0; i < movies[current_idx].names.length; i++)
+        {
+          let name = movies[current_idx].names[i].toLowerCase();
+          let similarity = compareTwoStrings(guess, name);
+          if (similarity > MIN_SIMILARITY)
+          {
+            success();
+            successful_trial = true;
+            break;
+          }
+        }
+
+        if (!successful_trial) {
+          failure();
+        }
+
+      }, 350));
+
+      next_button.addEventListener('click', function(e){
+        resetState();
+        update();
+      });
+
+      reveal.addEventListener('click', function(e){
+        show(answer);
+      });
 
       loadJSON(function(response) {
         // Parse JSON string into object
-        let movies = JSON.parse(response).movies;
-
-        let title_input = document.getElementById('movie-title');
-        title_input.focus();
-        let image = document.getElementById('movie-pic');
-        let current_idx = -1;
-        const MIN_SIMILARITY = 0.8;
-        let true_title = document.getElementById('true-title');
-
-        function update()
-        {
-          current_idx += 1;
-          if (current_idx >= movies.length) {
-              current_idx = 0;
-          }
-          image.src = movies[current_idx].image;
-          true_title.textContent = movies[current_idx].names[0];
-        }
+        movies = JSON.parse(response).movies;
         update();
-
-        title_input.addEventListener('keyup', _.debounce(function(e){
-          let guess = title_input.value.toLowerCase();
-          for (let i = 0; i < movies[current_idx].names.length; i++)
-          {
-            let name = movies[current_idx].names[i].toLowerCase();
-            let similarity = compareTwoStrings(guess, name);
-            if (similarity > MIN_SIMILARITY)
-            {
-              update();
-              break;
-            }
-          }
-        }, 350));
+        title_input.focus();
       });
 
     });
