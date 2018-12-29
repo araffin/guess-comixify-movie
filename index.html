@@ -191,6 +191,7 @@
       loadJSON(function(response) {
         // Parse JSON string into object
         movies = JSON.parse(response).movies;
+        movies = _.shuffle(movies);
         update();
         title_input.focus();
       });
