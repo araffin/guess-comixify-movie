@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="dist/spectre-exp.min.css">
     <link rel="stylesheet" href="dist/spectre-icons.min.css">
   </head>
-  <body>
+  <body style="background-color: #d3dce6;">
     <section class="container">
       <div class="columns">
         <!-- Image  -->
-        <div class="columns col-12">
-          <div class="column col-12 col-mx-auto">
-            <h3 class="text-center">Which movie is it?</h3>
+        <div class="columns col-12 mt-2">
+          <div class="column col-12 col-mx-auto mt-2">
+            <h3 class="text-center">Can You Guess The Movie?</h3>
           </div>
 
           <div class="column col-6 col-mx-auto">
-            <img src="img/0.jpg" style="height:600px" class="img-responsive" id="movie-pic" alt="...">
+            <img src="img/0.jpg" style="max-height:600px" class="img-responsive" id="movie-pic" alt="...">
           </div>
         </div>
 
@@ -32,7 +32,7 @@
             <div class="column col-8 mt-2">
               <div class="form-group" id='movie-input-group'>
                 <input class="form-input input-lg" type="text" id="movie-title" placeholder="Movie title">
-                <p id='answer' class="form-input-hint d-hide">Answer: <span id='true-title'>Apocalypse Now</span></p>
+                <p id='answer' class="form-input-hint d-hide text-dark">Answer: <span id='true-title'>Apocalypse Now</span></p>
               </div>
             </div>
 
@@ -156,6 +156,7 @@
           let similarity = compareTwoStrings(guess, name);
           if (similarity > MIN_SIMILARITY)
           {
+            true_title.textContent = name;
             success();
             successful_trial = true;
             break;
