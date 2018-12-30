@@ -11,26 +11,26 @@ class Movie(object):
         self.id = id
 
 # https://www.themoviedb.org/movie/id-name
-
+# movie names: en, fr
 movies = [
             [
                 'img/0.jpg', 'Apocalypse Now',
                 28
             ],
             [
-                'img/1.jpg', ['La Guerre des étoiles', 'Star Wars'],
+                'img/1.jpg', ['Star Wars', 'La Guerre des étoiles'],
                 11
             ],
             [
-                'img/2.png', ['Les Visiteurs', 'The Visitors'],
+                'img/2.png', ['The Visitors', 'Les Visiteurs'],
                 11687
             ],
             [
-                'img/3.png', ['Le Cercle des poètes disparus', 'Dead Poets Society'],
+                'img/3.png', ['Dead Poets Society', 'Le Cercle des poètes disparus'],
                  207
             ],
             [
-                'img/4.png', ['Les tontons flingueurs', 'Crooks in Clover'],
+                'img/4.png', ['Crooks in Clover', 'Les tontons flingueurs'],
                  25253
             ],
             [
