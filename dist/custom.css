@@ -7,3 +7,10 @@ body{
   height: 4rem;
   width: 10rem;
 }
+
+.fade {
+  transition: opacity 400ms ease;
+}
+.hide {
+  opacity: 0;
+}

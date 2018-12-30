@@ -36,33 +36,33 @@ function loadJSON(callback) {
 
 ready(function ()
 {
-  let answer = document.getElementById('answer');
   let try_again = document.getElementById('try-again');
   let reveal = document.getElementById('reveal');
   let title_input = document.getElementById('movie-title');
   let form_group = document.getElementById('movie-input-group');
   let image = document.getElementById('movie-pic');
-  let true_title = document.getElementById('true-title');
   let next_button = document.getElementById('next');
   let pass_button = document.getElementById('pass');
   let score = document.getElementById('score');
   let dis_elem = document.getElementById('dis-obj');
   let success_msg = document.getElementById('success-msg');
+  let movie_infos = document.querySelector('.movie-infos');
+  let movie_title = movie_infos.querySelector('.card-title');
   let current_idx = -1;
-  let movies, results, disObj;
+  let movies, results, disObjForm;
   let desintegrated = false;
 
   if(document.querySelector('[data-dis-type="simultaneous"]')) {
     window.addEventListener("disesLoaded", function()
     {
       // Get the relevant Disintegrate object
-      disObj = disintegrate.getDisObj(dis_elem);
+      disObjForm = disintegrate.getDisObj(dis_elem);
     });
   }
 
   function disintegrateBlock()
   {
-    disintegrate.createSimultaneousParticles(disObj);
+    disintegrate.createSimultaneousParticles(disObjForm);
     hide(dis_elem);
     show(next_button.parentElement)
   }
@@ -85,6 +85,20 @@ ready(function ()
     if (el.classList.contains('d-hide'))
     {
       el.classList.remove('d-hide');
+    }
+  }
+
+  function fadeOut(el){
+    if (!el.classList.contains('hide'))
+    {
+      el.classList.add('hide');
+    }
+  }
+
+  function fadeIn(el){
+    if (el.classList.contains('hide'))
+    {
+      el.classList.remove('hide');
     }
   }
 
@@ -120,8 +134,9 @@ ready(function ()
       results[current_idx] = 1;
     }
     disintegrateBlock();
-    show(answer);
-    show(success_msg)
+    fadeIn(success_msg);
+    movie_title.textContent = movies[current_idx].names[0];
+    fadeIn(movie_infos);
     updateScore();
   }
 
@@ -135,8 +150,9 @@ ready(function ()
 
   function nextMovie()
   {
-    hide(answer);
-    hide(success_msg);
+    fadeOut(success_msg);
+    fadeOut(movie_infos);
+
     title_input.value = '';
     current_idx += 1;
     if (current_idx >= movies.length) {
@@ -149,7 +165,6 @@ ready(function ()
     }
     updateScore();
     image.src = image_src;
-    true_title.textContent = movies[current_idx].names[0];
   }
 
   title_input.addEventListener('keyup', _.debounce(function(e){
@@ -167,7 +182,6 @@ ready(function ()
       let similarity = compareTwoStrings(guess, name.toLowerCase());
       if (similarity > MIN_SIMILARITY)
       {
-        true_title.textContent = name;
         success();
         successful_trial = true;
         break;
@@ -195,7 +209,8 @@ ready(function ()
 
   reveal.addEventListener('click', function(e){
     disintegrateBlock();
-    show(answer);
+    movie_title.textContent = movies[current_idx].names[0];
+    fadeIn(movie_infos);
     addToFailedMovies();
   });
 

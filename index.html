@@ -2,6 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Antonin Raffin">
+    <meta name="description" content="Can You Guess The Movie From a Comixified Scene?">
     <title>Guessing Game | Comixified Movies</title>
     <link rel="stylesheet" href="dist/spectre.min.css">
     <link rel="stylesheet" href="dist/spectre-exp.min.css">
@@ -24,10 +28,10 @@
                 <div class="card-title h2">Can You Guess The Movie?</div>
               </div>
 
-              <div class="movie-infos d-hide">
-                <div class="card-image p-centered">
+              <div class="movie-infos hide fade">
+                <!-- <div class="card-image p-centered">
                   <img src="https://picsum.photos/300/380/?blur" alt="poster" class="img-responsive">
-                </div>
+                </div> -->
                 <div class="card-header">
                   <div class="card-title h5"></div>
                   <div class="card-subtitle text-gray"></div>
@@ -37,7 +41,7 @@
               </div>
 
               <div class="card-footer">
-                <div class="toast toast-success d-hide" id="success-msg">
+                <div class="toast toast-success hide fade" id="success-msg">
                   Well done!
                 </div>
                 <div class="card-title h2">
@@ -63,6 +67,7 @@
               Next Movie
             </button>
           </div>
+
           <div class="columns col-md-12 col-6 col-mx-auto mt-2" data-dis-type="simultaneous" id="dis-obj">
             <div class="column col-2 mt-2">
               <button id="reveal" href="#" class="btn btn-lg">
@@ -73,7 +78,6 @@
             <div class="column col-8 mt-2 mb-2">
               <div class="form-group" id='movie-input-group'>
                 <input class="form-input input-lg" type="text" id="movie-title" placeholder="Movie title">
-                <p id='answer' class="form-input-hint d-hide">Good Answer: <span id='true-title'></span></p>
                 <p id='try-again' class="form-input-hint d-hide">Wrong answer, try again!</p>
               </div>
             </div>
