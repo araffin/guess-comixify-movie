@@ -18,27 +18,52 @@
         <div class="columns col-12 mt-2">
 
           <div class="column col-4 col-mx-auto col-md-12">
-            <div class="empty">
-              <h3 class="text-center">Can You Guess The Movie?</h3>
-              <p class="empty-title h4">Empty title</p>
-              <p class="empty-subtitle">by Real Name</p>
-              <div class="col-10 col-mx-auto">
-                <img class="img-responsive"
-                style="max-height:50%; max-height:50vh;"
-                id='poster' src="https://picsum.photos/300/380/?blur" alt="poster">
+
+            <div class="card">
+              <div class="card-header text-center">
+                <div class="card-title h2">Can You Guess The Movie?</div>
               </div>
-              <p class="empty-title h5">Score: <span id='score'>0/0</span></p>
-              <!-- <meter class="meter" value="20" min="0" max="100"></meter> -->
+
+              <div class="movie-infos d-hide">
+                <div class="card-image p-centered">
+                  <img src="https://picsum.photos/300/380/?blur" alt="poster" class="img-responsive">
+                </div>
+                <div class="card-header">
+                  <div class="card-title h5"></div>
+                  <div class="card-subtitle text-gray"></div>
+                </div>
+                <div class="card-body">
+                </div>
+              </div>
+
+              <div class="card-footer">
+                <div class="toast toast-success d-hide" id="success-msg">
+                  Well done!
+                </div>
+                <div class="card-title h2">
+                  Score: <span id='score'>0/0</span>
+                </div>
+                <!-- <button class="btn btn-primary btn-lg">Start</button> -->
+              </div>
             </div>
+
           </div>
 
           <div class="column col-6 col-mr-auto col-md-12">
-            <img src="img/0.jpg" style="max-height:85%; max-height:85vh;" class="img-responsive" id="movie-pic" alt="...">
+            <img src="https://picsum.photos/300/380/?blur" style="max-height:85%; max-height:85vh;"
+                 class="img-responsive" id="movie-pic" alt="movie comics">
           </div>
         </div>
 
         <div class="columns col-12 mb-2">
-          <div class="columns col-md-12 col-6 col-mx-auto mt-2" data-dis-type="test" id="testDis">
+
+          <div class="columns col-md-6 col-6 col-ml-auto mt-2 d-hide">
+
+            <button id="next" href="#" class="btn next-btn">
+              Next Movie
+            </button>
+          </div>
+          <div class="columns col-md-12 col-6 col-mx-auto mt-2" data-dis-type="simultaneous" id="dis-obj">
             <div class="column col-2 mt-2">
               <button id="reveal" href="#" class="btn btn-lg">
                 Answer
@@ -54,8 +79,8 @@
             </div>
 
             <div class="column col-2 mt-2">
-              <a id="next" href="#" class="btn btn-primary btn-lg">
-                Next <i class="icon icon-arrow-right"></i>
+              <a id="pass" href="#" class="btn btn-primary btn-lg">
+                Pass <i class="icon icon-arrow-right"></i>
               </a>
             </div>
 

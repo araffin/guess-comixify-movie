@@ -44,17 +44,27 @@ ready(function ()
   let image = document.getElementById('movie-pic');
   let true_title = document.getElementById('true-title');
   let next_button = document.getElementById('next');
+  let pass_button = document.getElementById('pass');
   let score = document.getElementById('score');
+  let dis_elem = document.getElementById('dis-obj');
+  let success_msg = document.getElementById('success-msg');
   let current_idx = -1;
   let movies, results, disObj;
   let desintegrated = false;
 
-  if(document.querySelector('[data-dis-type="test"]')) {
+  if(document.querySelector('[data-dis-type="simultaneous"]')) {
     window.addEventListener("disesLoaded", function()
     {
       // Get the relevant Disintegrate object
-      disObj = disintegrate.getDisObj(document.getElementById('testDis'));
+      disObj = disintegrate.getDisObj(dis_elem);
     });
+  }
+
+  function disintegrateBlock()
+  {
+    disintegrate.createSimultaneousParticles(disObj);
+    hide(dis_elem);
+    show(next_button.parentElement)
   }
 
 
@@ -109,8 +119,9 @@ ready(function ()
     {
       results[current_idx] = 1;
     }
-    disintegrate.createSimultaneousParticles(disObj);
+    disintegrateBlock();
     show(answer);
+    show(success_msg)
     updateScore();
   }
 
@@ -125,6 +136,7 @@ ready(function ()
   function nextMovie()
   {
     hide(answer);
+    hide(success_msg);
     title_input.value = '';
     current_idx += 1;
     if (current_idx >= movies.length) {
@@ -168,14 +180,21 @@ ready(function ()
 
   }, 350));
 
-  next_button.addEventListener('click', function(e){
+  pass_button.addEventListener('click', function(e){
     resetState();
     addToFailedMovies();
     nextMovie();
   });
 
+  next_button.addEventListener('click', function(e){
+    resetState();
+    nextMovie();
+    hide(next.parentElement);
+    show(dis_elem);
+  });
+
   reveal.addEventListener('click', function(e){
-    disintegrate.createSimultaneousParticles(disObj);
+    disintegrateBlock();
     show(answer);
     addToFailedMovies();
   });
