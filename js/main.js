@@ -48,9 +48,18 @@ ready(function ()
   let success_msg = document.getElementById('success-msg');
   let movie_infos = document.querySelector('.movie-infos');
   let movie_title = movie_infos.querySelector('.card-title');
+  let movie_more_button = movie_infos.querySelector('.card-body a');
+  let movie_poster = movie_infos.querySelector('.card-image img');
   let current_idx = -1;
   let movies, results, disObjForm;
   let desintegrated = false;
+
+  function addMovieInfos() {
+    let base_url = 'https://www.themoviedb.org/movie/';
+    movie_title.textContent = movies[current_idx].names[0];
+    movie_more_button.href = base_url + movies[current_idx].id;
+    movie_poster.src = movies[current_idx].poster;
+  }
 
   if(document.querySelector('[data-dis-type="simultaneous"]')) {
     window.addEventListener("disesLoaded", function()
@@ -134,8 +143,8 @@ ready(function ()
       results[current_idx] = 1;
     }
     disintegrateBlock();
-    fadeIn(success_msg);
-    movie_title.textContent = movies[current_idx].names[0];
+    show(success_msg);
+    addMovieInfos();
     fadeIn(movie_infos);
     updateScore();
   }
@@ -150,7 +159,7 @@ ready(function ()
 
   function nextMovie()
   {
-    fadeOut(success_msg);
+    hide(success_msg);
     fadeOut(movie_infos);
 
     title_input.value = '';
@@ -209,7 +218,7 @@ ready(function ()
 
   reveal.addEventListener('click', function(e){
     disintegrateBlock();
-    movie_title.textContent = movies[current_idx].names[0];
+    addMovieInfos();
     fadeIn(movie_infos);
     addToFailedMovies();
   });

@@ -28,23 +28,21 @@
                 <div class="card-title h2">Can You Guess The Movie?</div>
               </div>
 
-              <div class="movie-infos hide fade">
-                <!-- <div class="card-image p-centered">
-                  <img src="https://picsum.photos/300/380/?blur" alt="poster" class="img-responsive">
-                </div> -->
+              <div class="movie-infos hide fade text-center">
+                <div class="card-image">
+                  <img src="https://picsum.photos/300/450/?blur" alt="poster" class="p-centered img-responsive">
+                </div>
                 <div class="card-header">
                   <div class="card-title h5"></div>
                   <div class="card-subtitle text-gray"></div>
                 </div>
                 <div class="card-body">
+                  <a target="_blank" class="btn" href='#'>More</a>
                 </div>
               </div>
 
-              <div class="card-footer">
-                <div class="toast toast-success hide fade" id="success-msg">
-                  Well done!
-                </div>
-                <div class="card-title h2">
+              <div class="card-footer text-center">
+                <div class="card-title h3">
                   Score: <span id='score'>0/0</span>
                 </div>
                 <!-- <button class="btn btn-primary btn-lg">Start</button> -->
@@ -61,9 +59,14 @@
 
         <div class="columns col-12 mb-2">
 
-          <div class="columns col-md-6 col-6 col-ml-auto mt-2 d-hide">
+          <div class="columns col-10 mt-1 p-centered">
+            <div class="toast toast-success d-hide" id="success-msg">
+              Well done!
+            </div>
+          </div>
+          <div class="columns col-md-12 col-12 col-ml-auto mt-2 d-hide">
 
-            <button id="next" href="#" class="btn next-btn">
+            <button id="next" href="#" class="btn next-btn p-centered">
               Next Movie
             </button>
           </div>
