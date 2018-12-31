@@ -57,6 +57,7 @@ ready(function ()
   let movies, results, disObjForm;
   let desintegrated = false;
   let game_over = false;
+  let timer, start_time;
 
   function addMovieInfos() {
     let base_url = 'https://www.themoviedb.org/movie/';
@@ -102,7 +103,7 @@ ready(function ()
     for (let i = 0; i < movies.length; i++) {
       let success = results[i] == 1;
       let class_ = success ?  'text-success' : 'text-error';
-      html += `<p class=${class_}>${i}. ${movies[i].names[0]}</p>`
+      html += `<p class=${class_}>${i + 1}. ${movies[i].names[0]}</p>`
     }
     let card_body = results_card.querySelector('.card-body');
     card_body.innerHTML = html;
@@ -212,6 +213,7 @@ ready(function ()
       hide(movie_infos);
       hide(dis_elem);
       hide(next_button.parentElement);
+      clearInterval(timer);
       updateScore();
       showResults();
       return false;
@@ -281,6 +283,10 @@ ready(function ()
     addToFailedMovies();
   });
 
+  refresh.addEventListener('click', function(e){
+      location.reload();
+  });
+
   loadJSON(function(response) {
     // Parse JSON string into object
     movies = JSON.parse(response).movies;
@@ -289,6 +295,38 @@ ready(function ()
     results = new Array(movies.length);
     nextMovie();
     title_input.focus();
+    start_time = new Date().getTime();
+    startTimer();
   });
+
+  function startTimer()
+  {
+    // Update the timer every 1 second
+    timer = setInterval(function() {
+
+      // Get todays date and time
+      let now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      let distance = now - start_time;
+
+      // Time calculations for days, hours, minutes and seconds
+      let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      if (hours   < 10) {hours   = "0" + hours;}
+      if (minutes < 10) {minutes = "0" + minutes;}
+      if (seconds < 10) {seconds = "0" + seconds;}
+
+      document.getElementById("timer").innerHTML = `${minutes} : ${seconds}`;
+
+      // document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+      // + minutes + "m " + seconds + "s ";
+
+    }, 1000);
+
+  }
 
 });
