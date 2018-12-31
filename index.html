@@ -52,6 +52,9 @@
                 <div class="card-title h3">
                   Score: <span id='score'>0/0</span>
                 </div>
+                <div class="card-subtitle text-gray">
+                  Done: <span id="percent">0</span>%
+                </div>
                 <!-- <button class="btn btn-primary btn-lg">Start</button> -->
               </div>
             </div>
@@ -59,6 +62,19 @@
           </div>
 
           <div class="column col-6 col-mr-auto col-md-12">
+            <div class="card d-hide" id='results'>
+              <div class="card-header">
+                <div class="card-title h2">
+                  Results
+                </div>
+                <div class="card-subtitle h3 text-gray">
+                  10 / 15
+                </div>
+              </div>
+              <div class="card-body">
+
+              </div>
+            </div>
             <img src="https://picsum.photos/300/380/?blur" style="max-height:85%; max-height:85vh;"
                  class="img-responsive" id="movie-pic" alt="movie comics">
           </div>
@@ -78,10 +94,10 @@
             </button>
           </div>
 
-          <div class="columns col-md-12 col-6 col-mx-auto mt-2" data-dis-type="simultaneous" id="dis-obj">
+          <div class="columns col-md-12 col-7 col-mx-auto mt-2" data-dis-type="simultaneous" id="dis-obj">
             <div class="column col-2 mt-2">
               <button id="reveal" href="#" class="btn btn-lg">
-                Answer
+                I have no idea
               </button>
             </div>
 

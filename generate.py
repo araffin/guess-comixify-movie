@@ -42,6 +42,46 @@ movies = [
                 'img/6.jpg', 'Baby Driver',
                  339403, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/oTsgNy2XsO50PhpB8u5RRusfkjV.jpg'
             ],
+            [
+                'img/bon.jpg', ['The Good, the Bad and the Ugly ', 'Le Bon, la Brute et le Truand', 'Il buono, il brutto, il cattivo'],
+                 429, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/wfPHdfofBD5PN96dV96a51B3Ja2.jpg'
+            ],
+            [
+                'img/chute.jpg', ['Downfall', 'La Chute', 'Der Untergang'],
+                 613, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/1PeyCJmWl9G3zGJpvUddausqKuM.jpg'
+            ],
+            [
+                'img/full.jpg', 'Full Metal Jacket',
+                 600, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/wNImUY185y8cCEHNJeXgsdB0rC.jpg'
+            ],
+            [
+                'img/grand.jpg', 'The Grand Budapest Hotel',
+                 120467, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/gPZ6dO8cKCahCjJJvk5UhUBTJ9N.jpg'
+            ],
+            [
+                'img/harry_2.jpg', ['Harry Potter and the Chamber of Secrets', 'Harry Potter et la Chambre des Secrets'],
+                 672, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/ygsu82q2YSrIdePnM2GLGjsFFjr.jpg'
+            ],
+            [
+                'img/harry_7.jpg', ['Harry Potter and the Deathly Hallows', 'Harry Potter et les Reliques de la Mort'],
+                 12445, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/4gf2Px4oHJld9ASKLGUO1Fpots1.jpg'
+            ],
+            [
+                'img/lala.jpg', 'La La Land',
+                 313369, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/5KIj6aioW1UtUT1IV0qqW5iZbNH.jpg'
+            ],
+            [
+                'img/leeloo.jpg', ['The Fifth Element', 'Le Cinquième Élément', 'Le 5eme Élément'],
+                 313369, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/8nx8sttha1Zidt73SbNncVfSwqk.jpg'
+            ],
+            [
+                'img/mad.jpg', 'Mad Max: Fury Road',
+                 76341, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/oLy2V6AWSEfdPgKOtrSGnwB3Q2R.jpg'
+            ],
+            [
+                'img/nouveaux.jpg', 'Mad Max: Fury Road',
+                 76341, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/oLy2V6AWSEfdPgKOtrSGnwB3Q2R.jpg'
+            ],
         ]
 
 

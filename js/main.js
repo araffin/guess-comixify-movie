@@ -2,6 +2,7 @@
 
 const MIN_SIMILARITY = 0.81;
 const MEDIA_URL = 'https://media.githubusercontent.com/media/araffin/guess-comixify-movie/master/';
+const N_MOVIES = 10;
 
 disintegrate.init();
 
@@ -50,9 +51,12 @@ ready(function ()
   let movie_title = movie_infos.querySelector('.card-title');
   let movie_more_button = movie_infos.querySelector('.card-body a');
   let movie_poster = movie_infos.querySelector('.card-image img');
+  let percent = document.getElementById('percent');
+  let results_card = document.getElementById('results');
   let current_idx = -1;
   let movies, results, disObjForm;
   let desintegrated = false;
+  let game_over = false;
 
   function addMovieInfos() {
     let base_url = 'https://www.themoviedb.org/movie/';
@@ -73,14 +77,54 @@ ready(function ()
   {
     disintegrate.createSimultaneousParticles(disObjForm);
     hide(dis_elem);
-    show(next_button.parentElement)
+    show(next_button.parentElement);
   }
 
+  function checkGameOver()
+  {
+    if (!game_over) {
+      game_over = true;
+      for (let i = 0; i < results.length; i++)
+      {
+        if (typeof results[i] == 'undefined')
+        {
+          game_over = false;
+          break;
+        }
+      }
+    }
+    return game_over
+  }
+
+  function showResults()
+  {
+    let html = '';
+    for (let i = 0; i < movies.length; i++) {
+      let success = results[i] == 1;
+      let class_ = success ?  'text-success' : 'text-error';
+      html += `<p class=${class_}>${i}. ${movies[i].names[0]}</p>`
+    }
+    let card_body = results_card.querySelector('.card-body');
+    card_body.innerHTML = html;
+
+    let n_success = results.reduce((pv, cv) => pv + cv, 0);
+    let n_movies = movies.length;
+    results_card.querySelector('.card-subtitle').textContent = `${n_success} / ${n_movies}`;
+
+    show(results_card);
+  }
 
   function updateScore() {
     let n_success = results.reduce((pv, cv) => pv + cv, 0);
     let n_movies = movies.length;
     score.textContent = `${n_success} / ${n_movies}`;
+    let n_dones = 0;
+    for (let i = 0; i < results.length; i++) {
+      if (typeof results[i] != 'undefined') {
+        n_dones++;
+      }
+    }
+    percent.textContent = Math.round(100 * n_dones / movies.length);
   }
 
   function hide(el){
@@ -162,6 +206,17 @@ ready(function ()
     hide(success_msg);
     fadeOut(movie_infos);
 
+    if (checkGameOver())
+    {
+      hide(image);
+      hide(movie_infos);
+      hide(dis_elem);
+      hide(next_button.parentElement);
+      updateScore();
+      showResults();
+      return false;
+    }
+
     title_input.value = '';
     current_idx += 1;
     if (current_idx >= movies.length) {
@@ -174,6 +229,7 @@ ready(function ()
     }
     updateScore();
     image.src = image_src;
+    return true;
   }
 
   title_input.addEventListener('keyup', _.debounce(function(e){
@@ -211,9 +267,11 @@ ready(function ()
 
   next_button.addEventListener('click', function(e){
     resetState();
-    nextMovie();
-    hide(next.parentElement);
-    show(dis_elem);
+    if (nextMovie())
+    {
+      hide(next.parentElement);
+      show(dis_elem);
+    }
   });
 
   reveal.addEventListener('click', function(e){
@@ -227,6 +285,7 @@ ready(function ()
     // Parse JSON string into object
     movies = JSON.parse(response).movies;
     movies = _.shuffle(movies);
+    movies = _.take(movies, N_MOVIES);
     results = new Array(movies.length);
     nextMovie();
     title_input.focus();
