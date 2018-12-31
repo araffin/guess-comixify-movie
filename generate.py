@@ -79,8 +79,32 @@ movies = [
                  76341, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/oLy2V6AWSEfdPgKOtrSGnwB3Q2R.jpg'
             ],
             [
-                'img/nouveaux.jpg', 'Mad Max: Fury Road',
-                 76341, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/oLy2V6AWSEfdPgKOtrSGnwB3Q2R.jpg'
+                'img/nouveaux.jpg', ['Wild Tales', 'Les Nouveaux Sauvages', 'Relatos salvajes'],
+                 265195, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/ohpEgwbU4msY7YnRx6vsJVJPajp.jpg'
+            ],
+            [
+                'img/lord.jpg', ['The Lord of the Rings: The Two Towers', 'Le Seigneur des anneaux : Les Deux Tours'],
+                 121, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/7RLrUQH2qnCw4To5nVwRAdywGVy.jpg'
+            ],
+            [
+                'img/now.jpg', ['Now You See Me 2', 'Insaisissables 2'],
+                 291805, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/hKWFfyRIrUUmdEPqWTDKeK9szsv.jpg'
+            ],
+            [
+                'img/ny.jpg', ['Begin Again', 'New York Melody'],
+                 198277, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/9B60RUP0Fz7ocR5Lf6Afi1zOfJP.jpg'
+            ],
+            [
+                'img/padrino.jpg', ['The Godfather', 'Le Parrain'],
+                 238, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/j0O2PYvV2INW64jmTc4e5IVqQsz.jpg'
+            ],
+            [
+                'img/pulp.jpg', ['Pulp Fiction'],
+                 680, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/7p8x4U3o3p1JZMBqNY3zAlobY3m.jpg'
+            ],
+            [
+                'img/shining.jpg', ['The Shining', 'Shining'],
+                 694, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/lCVa5zPmAZmzoEXJTyGKSuiW1H9.jpg'
             ],
         ]
 
