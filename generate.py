@@ -106,8 +106,30 @@ movies = [
                 'img/shining.jpg', ['The Shining', 'Shining'],
                  694, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/lCVa5zPmAZmzoEXJTyGKSuiW1H9.jpg'
             ],
+            [
+                'img/sparte.jpg', '300',
+                 1271, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/nKQqh6kJvPdpOJD24enD3Bm1Hy5.jpg'
+            ],
+            [
+                'img/oss.jpg', ['OSS 117: Lost in Rio', 'OSS 117 : Rio ne répond plus'],
+                 15588, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/bCrDUHGcncm51H21AyEyBN13W4t.jpg'
+            ],
+            [
+                'img/pod.jpg', ['The Phantom Menace', 'La Menace fantôme'],
+                 1893, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/etnrgeks0Al3wSo44Ji6xgaLBAW.jpg'
+            ],
+            [
+                'img/up.jpg', ['Up', 'Là-haut'],
+                 14160, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/fhPsHld7wU1JlgnTZTFBVuF0Dq6.jpg'
+            ],
+            [
+                'img/west.jpg', 'West Side Story',
+                 1725, 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/lZ7CR15ZAQnpFUTIXh1rR44i0Jy.jpg'
+            ],
         ]
 
+
+print("{} movies".format(len(movies)))
 
 data = {'movies': [Movie(*movie).__dict__ for movie in movies]}
 
