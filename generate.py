@@ -20,6 +20,9 @@ class Movie(object):
             else:
                 names_dict['original_title'] = ''
 
+        if isinstance(names, dict):
+            names_dict = names
+
         if names_dict is not None:
             names = list(names_dict.values())
 
@@ -89,7 +92,7 @@ movies_list = [
             ],
             [
                 'img/leeloo.jpg', ['The Fifth Element', 'Le Cinquième Élément', 'Le 5eme Élément'],
-                 313369, '8nx8sttha1Zidt73SbNncVfSwqk.jpg'
+                 18, '8nx8sttha1Zidt73SbNncVfSwqk.jpg'
             ],
             [
                 'img/mad.jpg', 'Mad Max: Fury Road',

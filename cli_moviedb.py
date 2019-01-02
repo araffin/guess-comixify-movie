@@ -1,12 +1,13 @@
 import os
 import time
+import json
 import http.client
 from pprint import pprint
 
 import tmdbsimple as tmdb
 from PyInquirer import prompt, style_from_dict, Token
 
-from generate import Movie, movies_list, generate_movies_json, movies
+from generate import Movie, generate_movies_json, movies
 
 # Max 5 request per second
 RATE = 1 / 5
@@ -30,6 +31,7 @@ with open('.api_key', 'r') as fh:
 
 intentions = {
     'Search for a movie': 'search',
+    'Call The Movie DB api': 'call',
     'Generate data.json file': 'generate',
 }
 
@@ -72,17 +74,20 @@ if intention == 'search':
     movie = tmdb.Movies(movie_id)
     movie_infos = movie.info()
 
-
     # TODO: Get ALternative titles + Get Images
     # time.sleep(RATE)
     # connection = http.client.HTTPSConnection("api.themoviedb.org")
     # payload = "{}"
     #
-    # connection.request("GET", "/3/movie/{}/alternative_titles?api_key={}".format(movie, tmdb.API_KEY), payload)
+    # connection.request("GET", "/3/movie/{}/alternative_titles?api_key={}".format(movie_id, tmdb.API_KEY), payload)
     # data = connection.getresponse().read()
+    # titles = json.loads(data.decode('utf-8'))['titles']
+    # pprint(titles)
     #
-    # connection.request("GET", "/3/movie/{}/images?api_key={}".format(movie, tmdb.API_KEY), payload)
+    # connection.request("GET", "/3/movie/{}/images?api_key={}".format(movie_id, tmdb.API_KEY), payload)
     # data = connection.getresponse().read()
+    # images = json.loads(data.decode('utf-8'))['posters']
+    # pprint(images)
 
     comix_prompt = {
         'type': 'input',
@@ -110,5 +115,25 @@ if intention == 'search':
     )
     pprint(movie_obj.__dict__)
 
+elif intention == 'call':
+    new_movies = []
+    for idx, movie_dict in enumerate(movies):
+        print(idx, movie_dict['names'][0])
+        movie = tmdb.Movies(movie_dict['id'])
+        movie_infos = movie.info()
+        names = {
+            'en': movie_infos['title'],
+            'fr': '',
+            'original_title': movie_infos['original_title']
+        }
+
+        new_movie_dict = Movie(
+            movie_dict['image'],
+            names,
+            id=movie_dict['id'],
+            poster=movie_infos['poster_path']
+        ).__dict__
+        new_movies.append(new_movie_dict)
+    generate_movies_json(new_movies)
 else:
     generate_movies_json(movies)
