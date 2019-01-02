@@ -62,9 +62,22 @@ ready(function ()
   let game_over = false;
   let timer, start_time;
 
+  function placeholderMovieInfos() {
+      movie_title.textContent = "???";
+      movie_more_button.href = '#';
+      hide(movie_more_button);
+      let placeholder = 'poster.jpg'
+      if (base_url.startsWith('https://araffin.github.io'))
+      {
+        placeholder = MEDIA_URL + placeholder;
+      }
+      movie_poster.src = placeholder;
+  }
+
   function addMovieInfos() {
     movie_title.textContent = movies[current_idx].names[0];
     movie_more_button.href = BASE_MOVIE_DB + movies[current_idx].id;
+    show(movie_more_button);
     movie_poster.src = BASE_POSTER_URL + movies[current_idx].poster;
   }
 
@@ -192,7 +205,6 @@ ready(function ()
     disintegrateBlock();
     show(success_msg);
     addMovieInfos();
-    fadeIn(movie_infos);
     updateScore();
   }
 
@@ -207,7 +219,7 @@ ready(function ()
   function nextMovie()
   {
     hide(success_msg);
-    fadeOut(movie_infos);
+    placeholderMovieInfos();
 
     if (checkGameOver())
     {
@@ -281,7 +293,6 @@ ready(function ()
   reveal.addEventListener('click', function(e){
     disintegrateBlock();
     addMovieInfos();
-    fadeIn(movie_infos);
     addToFailedMovies();
   });
 

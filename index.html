@@ -34,9 +34,9 @@
                 <div class="card-title h2">Can You Guess The Movie?</div>
               </div>
 
-              <div class="movie-infos hide fade text-center">
+              <div class="movie-infos text-center">
                 <div class="card-image">
-                  <img src="https://picsum.photos/300/450/?blur" alt="poster"
+                  <img src="poster.jpg" id="poster" alt="poster"
                       class="p-centered img-responsive" style="max-height: 340px">
                 </div>
                 <div class="card-header">
@@ -45,6 +45,42 @@
                 </div>
                 <div class="card-body">
                   <a target="_blank" class="btn" href='#'>More</a>
+                </div>
+              </div>
+              <div class="columns col-12 mb-2">
+
+                <div class="columns col-10 mt-1 p-centered">
+                  <div class="toast toast-success d-hide" id="success-msg">
+                    Well done!
+                  </div>
+                </div>
+                <div class="columns col-md-12 col-12 col-ml-auto mt-2 d-hide">
+
+                  <button id="next" href="#" class="btn next-btn p-centered">
+                    Next Movie
+                  </button>
+                </div>
+
+                <div class="columns col-md-12 col-11 col-mx-auto mt-2" data-dis-type="simultaneous" id="dis-obj">
+                  <div class="column col-4 p-centered mt-2">
+                    <button id="reveal" href="#" class="btn btn-lg">
+                      I have no idea
+                    </button>
+                  </div>
+                  <div class="column col-2 mt-2 p-centered">
+                    <button id="pass" href="#" class="btn btn-primary btn-lg">
+                      Pass <i class="icon icon-arrow-right"></i>
+                    </button>
+                  </div>
+
+                  <div class="column col-11 p-centered mt-2 mb-2">
+                    <div class="form-group" id='movie-input-group'>
+                      <input class="form-input input-lg" type="text" id="movie-title" placeholder="Movie title">
+                      <p id='try-again' class="form-input-hint d-hide">Wrong answer, try again!</p>
+                    </div>
+                  </div>
+
+
                 </div>
               </div>
 
@@ -64,8 +100,8 @@
 
           </div>
 
-          <div class="column col-6 col-mr-auto col-md-12">
-            <div class="card d-hide" id='results'>
+          <div class="column col-6 col-mr-auto col-md-12 bg-gray">
+            <div class="card d-hide mt-2 mb-2" id='results'>
               <div class="card-header">
                 <div class="card-title h2">
                   Results
@@ -81,46 +117,10 @@
               </div>
             </div>
             <img src="https://picsum.photos/300/380/?blur" style="max-height:85%; max-height:85vh;"
-                 class="img-responsive" id="movie-pic" alt="movie comics">
+                 class="img-responsive p-centered mt-2" id="movie-pic" alt="movie comics">
           </div>
         </div>
 
-        <div class="columns col-12 mb-2">
-
-          <div class="columns col-10 mt-1 p-centered">
-            <div class="toast toast-success d-hide" id="success-msg">
-              Well done!
-            </div>
-          </div>
-          <div class="columns col-md-12 col-12 col-ml-auto mt-2 d-hide">
-
-            <button id="next" href="#" class="btn next-btn p-centered">
-              Next Movie
-            </button>
-          </div>
-
-          <div class="columns col-md-12 col-7 col-mx-auto mt-2" data-dis-type="simultaneous" id="dis-obj">
-            <div class="column col-2 mt-2">
-              <button id="reveal" href="#" class="btn btn-lg">
-                I have no idea
-              </button>
-            </div>
-
-            <div class="column col-8 mt-2 mb-2">
-              <div class="form-group" id='movie-input-group'>
-                <input class="form-input input-lg" type="text" id="movie-title" placeholder="Movie title">
-                <p id='try-again' class="form-input-hint d-hide">Wrong answer, try again!</p>
-              </div>
-            </div>
-
-            <div class="column col-2 mt-2">
-              <a id="pass" href="#" class="btn btn-primary btn-lg">
-                Pass <i class="icon icon-arrow-right"></i>
-              </a>
-            </div>
-
-          </div>
-        </div>
 
       </div>
     </section>
@@ -138,6 +138,9 @@
             <a href="https://lodash.com/">lodash</a>
             <a href="https://github.com/aceakash/string-similarity">string-similarity</a>
             and <a href="https://www.themoviedb.org">The Movie DB</a>.
+
+            Icon from <a href="https://www.iconfinder.com/icons/206748/faq_mark_question_icon">Icon Finder</a>
+            under Create Commons licence.
           </p>
         </div>
       </div>
