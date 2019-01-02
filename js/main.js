@@ -5,6 +5,7 @@ const MEDIA_URL = 'https://media.githubusercontent.com/media/araffin/guess-comix
 const N_MOVIES = 10;
 const BASE_POSTER_URL = 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/';
 const BASE_MOVIE_DB = 'https://www.themoviedb.org/movie/';
+const MIN_DELAY = 200; // ms between answer check
 
 disintegrate.init();
 
@@ -260,7 +261,7 @@ ready(function ()
       failure();
     }
 
-  }, 350));
+  }, MIN_DELAY));
 
   pass_button.addEventListener('click', function(e){
     resetState();
