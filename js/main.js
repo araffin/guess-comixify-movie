@@ -3,6 +3,8 @@
 const MIN_SIMILARITY = 0.81;
 const MEDIA_URL = 'https://media.githubusercontent.com/media/araffin/guess-comixify-movie/master/';
 const N_MOVIES = 10;
+const BASE_POSTER_URL = 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/';
+const BASE_MOVIE_DB = 'https://www.themoviedb.org/movie/';
 
 disintegrate.init();
 
@@ -60,10 +62,9 @@ ready(function ()
   let timer, start_time;
 
   function addMovieInfos() {
-    let base_url = 'https://www.themoviedb.org/movie/';
     movie_title.textContent = movies[current_idx].names[0];
-    movie_more_button.href = base_url + movies[current_idx].id;
-    movie_poster.src = movies[current_idx].poster;
+    movie_more_button.href = BASE_MOVIE_DB + movies[current_idx].id;
+    movie_poster.src = BASE_POSTER_URL + movies[current_idx].poster;
   }
 
   if(document.querySelector('[data-dis-type="simultaneous"]')) {
