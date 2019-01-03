@@ -13,6 +13,12 @@ disintegrate.init();
 let get_url = window.location;
 let base_url = get_url .protocol + "//" + get_url.host + "/" + get_url.pathname.split('/')[1];
 
+let image_prefix = '';
+if (base_url.startsWith('https://araffin.github.io'))
+{
+  image_prefix = MEDIA_URL;
+}
+
 function ready(fn) {
   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
     fn();
@@ -69,11 +75,7 @@ ready(function ()
       movie_title.textContent = "???";
       movie_more_button.href = '#';
       hide(movie_more_button);
-      let placeholder = 'poster.jpg'
-      if (base_url.startsWith('https://araffin.github.io'))
-      {
-        placeholder = MEDIA_URL + placeholder;
-      }
+      let placeholder = image_prefix + 'poster.jpg'
       movie_poster.src = placeholder;
   }
 
@@ -243,12 +245,8 @@ ready(function ()
         current_idx = 0;
     }
     let image_src = movies[current_idx].image;
-    if (base_url.startsWith('https://araffin.github.io'))
-    {
-      image_src = MEDIA_URL + image_src;
-    }
     updateScore();
-    image.src = image_src;
+    image.src = image_prefix + image_src;
     return true;
   }
 
@@ -312,7 +310,19 @@ ready(function ()
     title_input.focus();
     start_time = new Date().getTime();
     startTimer();
+    preloadImages();
   });
+
+  function preloadImages()
+  {
+    for (let i = 0; i < N_MOVIES; i++)
+    {
+        let im = new Image();
+        im.src = image_prefix + movies[i].image;
+        let poster = new Image();
+        poster.src = BASE_POSTER_URL + movies[i].posters[lang];
+    }
+  }
 
   loadJSON(function(response) {
     // Parse JSON string into object
