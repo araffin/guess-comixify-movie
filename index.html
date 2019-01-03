@@ -27,7 +27,26 @@
     <style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
     <section class="container">
-      <div class="columns mt-2">
+      <div class="columns" id='lang-select-block'>
+        <div class="col-6 col-md-12 col-mx-auto">
+          <div class="empty">
+            <div class="empty-icon">
+              <i class="icon icon-4x icon-people"></i>
+            </div>
+            <p class="empty-title h5">Please select a language to start</p>
+            <p class="empty-subtitle">This will show the posters and titles in the chosen language</p>
+            <div class="empty-action">
+              <div class="btn-group btn-group-block" id='languages'>
+                <button class="btn" value="en">English</button>
+                <button class="btn" value="fr">Français</button>
+                <button class="btn" value="es">Español</button>
+                <button class="btn" value="de">Deutsch</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns mt-2" id='game'>
         <!-- Comic strip + results -->
         <div class="column col-6 col-ml-auto col-md-12 bg-gray">
           <div class="card d-hide mt-2 mb-2" id='results'>
@@ -114,7 +133,11 @@
                 Score: <span id='score'>0/0</span>
               </div>
               <div class="card-subtitle text-gray">
-                Done: <span id="percent">0</span>%
+                <div class="bar">
+                  <div class="bar-item" role="progressbar" style="width:25%;">
+                    <span id="percent">0</span>%
+                  </div>
+                </div>
               </div>
             </div>
           </div>

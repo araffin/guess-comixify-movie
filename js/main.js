@@ -57,6 +57,8 @@ ready(function ()
   let movie_poster = movie_infos.querySelector('.card-image img');
   let percent = document.getElementById('percent');
   let results_card = document.getElementById('results');
+  let lang_block = document.getElementById('lang-select-block');
+  let lang_buttons = document.getElementById('languages');
   let current_idx = -1;
   let movies, results, disObjForm;
   let desintegrated = false;
@@ -142,6 +144,7 @@ ready(function ()
       }
     }
     percent.textContent = Math.round(100 * n_dones / movies.length);
+    percent.parentElement.style.width = percent.textContent  + '%';
   }
 
   function hide(el){
@@ -303,6 +306,14 @@ ready(function ()
       location.reload();
   });
 
+  languages.addEventListener('click', function(e){
+    lang = e.target.value;
+    hide(lang_block);
+    title_input.focus();
+    start_time = new Date().getTime();
+    startTimer();
+  });
+
   loadJSON(function(response) {
     // Parse JSON string into object
     movies = JSON.parse(response).movies;
@@ -310,10 +321,8 @@ ready(function ()
     movies = _.take(movies, N_MOVIES);
     results = new Array(movies.length);
     nextMovie();
-    title_input.focus();
-    start_time = new Date().getTime();
-    startTimer();
   });
+
 
   function startTimer()
   {
