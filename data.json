@@ -5,12 +5,14 @@
             "image": "img/0.jpg",
             "lang": "en",
             "names": {
+                "de": "Apocalypse Now",
                 "en": "Apocalypse Now",
                 "es": "Apocalypse Now",
                 "fr": "Apocalypse Now",
                 "original_title": "Apocalypse Now"
             },
             "posters": {
+                "de": "/xkYgECezNwncI14caXHWobV4E6G.jpg",
                 "en": "/jcvJ2xcVWU9Wh0hZAxcs103s8nN.jpg",
                 "es": "/2VS9hnGkKbIp7JiBtfiJSYfY6Ag.jpg",
                 "fr": "/5MMY5V8JCjiRhtdepjWgNTYyOZl.jpg"
@@ -21,12 +23,14 @@
             "image": "img/1.jpg",
             "lang": "en",
             "names": {
+                "de": "Das Imperium schl\u00e4gt zur\u00fcck",
                 "en": "The Empire Strikes Back",
                 "es": "La guerra de las galaxias. Episodio V: El imperio contraataca",
                 "fr": "L'Empire contre-attaque",
                 "original_title": "The Empire Strikes Back"
             },
             "posters": {
+                "de": "/aIgM2d5iDRFIXb6t7GW5d9nR840.jpg",
                 "en": "/9SKDSFbaM6LuGqG1aPWN3wYGEyD.jpg",
                 "es": "/eU7KcNAOeZj9PBIcGUMSsuJz8qj.jpg",
                 "fr": "/nqY9dJeRaSEJlmljOpPA5Tc9moQ.jpg"
@@ -37,12 +41,14 @@
             "image": "img/2.jpg",
             "lang": "fr",
             "names": {
+                "de": "Die Besucher",
                 "en": "The Visitors",
                 "es": "Los visitantes",
                 "fr": "Les Visiteurs",
                 "original_title": "Les Visiteurs"
             },
             "posters": {
+                "de": "/niFyXpaGRJLlFZVWD0WwrJabsK5.jpg",
                 "en": "/tKCeoKQzf5kwaAMBkfhLyphuJeL.jpg",
                 "es": "/ku0iLmb2KIuUA3AJNduBvVOYBHo.jpg",
                 "fr": "/ad3mSN89aBh5e057y402FOPAg0X.jpg"
@@ -53,12 +59,14 @@
             "image": "img/3.jpg",
             "lang": "en",
             "names": {
+                "de": "Der Club der toten Dichter",
                 "en": "Dead Poets Society",
                 "es": "El club de los poetas muertos",
                 "fr": "Le Cercle des po\u00e8tes disparus",
                 "original_title": "Dead Poets Society"
             },
             "posters": {
+                "de": "/oauo0B3FIg15pl0E2cFEDnf8YJ4.jpg",
                 "en": "/3Ri2GReavqSHqWemlP6HYn8i2P9.jpg",
                 "es": "/rP92uZg0Azxjk9Lj5juRA8TEMR5.jpg",
                 "fr": "/mNhThFspwKfFe98zggChX6OqQE3.jpg"
@@ -69,12 +77,14 @@
             "image": "img/4.jpg",
             "lang": "fr",
             "names": {
+                "de": "Mein Onkel der Gangster",
                 "en": "Crooks in Clover",
                 "es": "G\u00e1ngsters a la fuerza",
                 "fr": "Les tontons flingueurs",
                 "original_title": "Les tontons flingueurs"
             },
             "posters": {
+                "de": "/dqYig2GxgICQdK3KTS7f8yPl4Pm.jpg",
                 "en": "/zRjsmbkSOI6KAAARq3y91JrEOge.jpg",
                 "es": "/dqYig2GxgICQdK3KTS7f8yPl4Pm.jpg",
                 "fr": "/dqYig2GxgICQdK3KTS7f8yPl4Pm.jpg"
@@ -85,12 +95,14 @@
             "image": "img/5.jpg",
             "lang": "en",
             "names": {
+                "de": "Deadpool",
                 "en": "Deadpool",
                 "es": "Deadpool",
                 "fr": "Deadpool",
                 "original_title": "Deadpool"
             },
             "posters": {
+                "de": "/zWD1ZXM6w73UNdTfXwVzUm6fd95.jpg",
                 "en": "/inVq3FRqcYIRl2la8iZikYYxFNR.jpg",
                 "es": "/sBH09ufjCU3KuMcGqGItsqeG9dU.jpg",
                 "fr": "/eJyRzC5uFjQryu8Hm61yqtrzj4S.jpg"
@@ -101,12 +113,14 @@
             "image": "img/6.jpg",
             "lang": "en",
             "names": {
+                "de": "Baby Driver",
                 "en": "Baby Driver",
                 "es": "Baby Driver",
                 "fr": "Baby Driver",
                 "original_title": "Baby Driver"
             },
             "posters": {
+                "de": "/eii2RSbU21ZPZ6vyQGcwzaNKReQ.jpg",
                 "en": "/rmnQ9jKW72bHu8uKlMjPIb2VLMI.jpg",
                 "es": "/5FFkWMuLntzxqdpLT12avTxRpPE.jpg",
                 "fr": "/oTsgNy2XsO50PhpB8u5RRusfkjV.jpg"
@@ -117,12 +131,14 @@
             "image": "img/bon.jpg",
             "lang": "it",
             "names": {
+                "de": "Zwei glorreiche Halunken",
                 "en": "The Good, the Bad and the Ugly",
                 "es": "El bueno, el feo y el malo",
                 "fr": "Le Bon, la Brute et le Truand",
                 "original_title": "Il buono, il brutto, il cattivo"
             },
             "posters": {
+                "de": "/rhL6iYSGFyMYhNGevlppT9bsZHt.jpg",
                 "en": "/wfPHdfofBD5PN96dV96a51B3Ja2.jpg",
                 "es": "/c7ioGWDmZHcg3EXkGUdfQMv4hO3.jpg",
                 "fr": "/bCfsXkFARKRH7tgvtCx2B3azoCQ.jpg"
@@ -133,12 +149,14 @@
             "image": "img/chute.jpg",
             "lang": "de",
             "names": {
+                "de": "Der Untergang",
                 "en": "Downfall",
                 "es": "El hundimiento",
                 "fr": "La Chute",
                 "original_title": "Der Untergang"
             },
             "posters": {
+                "de": "/tWkYcchUuh0rdm94Zcv9BhXJpNt.jpg",
                 "en": "/2QmpblYvUThzBQ4ArdT1Kp43DZi.jpg",
                 "es": "/bYyRCdDcdjUvPngATsBRLNc4xdk.jpg",
                 "fr": "/1PeyCJmWl9G3zGJpvUddausqKuM.jpg"
@@ -149,12 +167,14 @@
             "image": "img/full.jpg",
             "lang": "en",
             "names": {
+                "de": "Full Metal Jacket",
                 "en": "Full Metal Jacket",
                 "es": "La chaqueta met\u00e1lica",
                 "fr": "Full Metal Jacket",
                 "original_title": "Full Metal Jacket"
             },
             "posters": {
+                "de": "/22fW8yptre9zvZXWQ1WEsXJKpxb.jpg",
                 "en": "/29veIwD38rVL2qY74emXQw4y25H.jpg",
                 "es": "/AfJE8hQew1FD2zHRgDy2yY3ZHpS.jpg",
                 "fr": "/wNImUY185y8cCEHNJeXgsdB0rC.jpg"
@@ -165,12 +185,14 @@
             "image": "img/grand.jpg",
             "lang": "en",
             "names": {
+                "de": "The Grand Budapest Hotel",
                 "en": "The Grand Budapest Hotel",
                 "es": "El gran hotel Budapest",
                 "fr": "The Grand Budapest Hotel",
                 "original_title": "The Grand Budapest Hotel"
             },
             "posters": {
+                "de": "/tFEDiOt5sqmZSXpVImPwxB3ZBkV.jpg",
                 "en": "/nX5XotM9yprCKarRH4fzOq1VM1J.jpg",
                 "es": "/4hUl6umJmi3UTwnzasBwF0LVlGA.jpg",
                 "fr": "/gPZ6dO8cKCahCjJJvk5UhUBTJ9N.jpg"
@@ -181,12 +203,14 @@
             "image": "img/harry_2.jpg",
             "lang": "en",
             "names": {
+                "de": "Harry Potter und die Kammer des Schreckens",
                 "en": "Harry Potter and the Chamber of Secrets",
                 "es": "Harry Potter y la c\u00e1mara secreta",
                 "fr": "Harry Potter et la Chambre des Secrets",
                 "original_title": "Harry Potter and the Chamber of Secrets"
             },
             "posters": {
+                "de": "/oJdOAzqzWQrRTVjg3XrQOoI0Q8H.jpg",
                 "en": "/sdEOH0992YZ0QSxgXNIGLq1ToUi.jpg",
                 "es": "/nrbXdXtAFQF31MU5a8izJ9RW6NV.jpg",
                 "fr": "/ygsu82q2YSrIdePnM2GLGjsFFjr.jpg"
@@ -197,12 +221,14 @@
             "image": "img/harry_7.jpg",
             "lang": "en",
             "names": {
+                "de": "Harry Potter und die Heiligt\u00fcmer des Todes",
                 "en": "Harry Potter and the Deathly Hallows",
                 "es": "Harry Potter y las Reliquias de la Muerte",
                 "fr": "Harry Potter et les Reliques de la Mort",
                 "original_title": "Harry Potter and the Deathly Hallows"
             },
             "posters": {
+                "de": "/cY67yAO23VkTkPSwtNTiunWzFgZ.jpg",
                 "en": "/fTplI1NCSuEDP4ITLcTps739fcC.jpg",
                 "es": "/aM1TuUiPtV8OAZyu61CTdy9Ymtk.jpg",
                 "fr": "/4gf2Px4oHJld9ASKLGUO1Fpots1.jpg"
@@ -213,12 +239,14 @@
             "image": "img/lala.jpg",
             "lang": "en",
             "names": {
+                "de": "La La Land",
                 "en": "La La Land",
                 "es": "La La Land",
                 "fr": "La La Land",
                 "original_title": "La La Land"
             },
             "posters": {
+                "de": "/cRHTEMqPHYEfV9d1n6WF2sw5q7X.jpg",
                 "en": "/ylXCdC106IKiarftHkcacasaAcb.jpg",
                 "es": "/i712GLJklSVeuuNiz4egs7L1BvF.jpg",
                 "fr": "/5KIj6aioW1UtUT1IV0qqW5iZbNH.jpg"
@@ -229,12 +257,14 @@
             "image": "img/leeloo.jpg",
             "lang": "en",
             "names": {
+                "de": "Das f\u00fcnfte Element",
                 "en": "The Fifth Element",
                 "es": "El quinto elemento",
                 "fr": "Le Cinqui\u00e8me \u00c9l\u00e9ment",
                 "original_title": "The Fifth Element"
             },
             "posters": {
+                "de": "/nRbbu5HRtuisg9uQnnDnICOJWKw.jpg",
                 "en": "/zaFa1NRZEnFgRTv5OVXkNIZO78O.jpg",
                 "es": "/r2IFRKmD0nLaJOaILGKHdF31bKy.jpg",
                 "fr": "/8nx8sttha1Zidt73SbNncVfSwqk.jpg"
@@ -245,12 +275,14 @@
             "image": "img/mad.jpg",
             "lang": "en",
             "names": {
+                "de": "Mad Max: Fury Road",
                 "en": "Mad Max: Fury Road",
                 "es": "Mad Max: Furia en la carretera",
                 "fr": "Mad Max : Fury Road",
                 "original_title": "Mad Max: Fury Road"
             },
             "posters": {
+                "de": "/i68IvNkUvqaKPY0UbadXcQ23aik.jpg",
                 "en": "/kqjL17yufvn9OVLyXYpvtyrFfak.jpg",
                 "es": "/xHfhQIK4BNlsGv5Ylx8mVq0hJT1.jpg",
                 "fr": "/oLy2V6AWSEfdPgKOtrSGnwB3Q2R.jpg"
@@ -261,12 +293,14 @@
             "image": "img/nouveaux.jpg",
             "lang": "es",
             "names": {
+                "de": "Wild Tales - Jeder dreht mal durch!",
                 "en": "Wild Tales",
                 "es": "Relatos salvajes",
                 "fr": "Les Nouveaux sauvages",
                 "original_title": "Relatos salvajes"
             },
             "posters": {
+                "de": "/yzOLirrJm99tzKZHl6XhM8xvmhk.jpg",
                 "en": "/8qc4aWkYJVXaWcypDusuudnME18.jpg",
                 "es": "/aNlTNuLvm0mFbVvmayLvEq1qF84.jpg",
                 "fr": "/ohpEgwbU4msY7YnRx6vsJVJPajp.jpg"
@@ -277,12 +311,14 @@
             "image": "img/lord.jpg",
             "lang": "en",
             "names": {
+                "de": "Der Herr der Ringe - Die zwei T\u00fcrme",
                 "en": "The Lord of the Rings: The Two Towers",
                 "es": "El se\u00f1or de los anillos: Las dos torres",
                 "fr": "Le Seigneur des anneaux : Les Deux Tours",
                 "original_title": "The Lord of the Rings: The Two Towers"
             },
             "posters": {
+                "de": "/cMa7haLxqVe4fWNORPIq6fGdjys.jpg",
                 "en": "/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg",
                 "es": "/up6gIHZlfEQZkHIfQwcOOaGOzOt.jpg",
                 "fr": "/7RLrUQH2qnCw4To5nVwRAdywGVy.jpg"
@@ -293,12 +329,14 @@
             "image": "img/now.jpg",
             "lang": "en",
             "names": {
+                "de": "Die Unfassbaren 2",
                 "en": "Now You See Me 2",
                 "es": "Ahora me ves 2",
                 "fr": "Insaisissables 2",
                 "original_title": "Now You See Me 2"
             },
             "posters": {
+                "de": "/mVG3xVuGKNfo0kUIYspHE1ohx4v.jpg",
                 "en": "/hU0E130tsGdsYa4K9lc3Xrn5Wyt.jpg",
                 "es": "/pjGt13AXXTLxvkmdF6SpA1feFOw.jpg",
                 "fr": "/hKWFfyRIrUUmdEPqWTDKeK9szsv.jpg"
@@ -309,12 +347,14 @@
             "image": "img/ny.jpg",
             "lang": "en",
             "names": {
+                "de": "Can A Song Save Your Life?",
                 "en": "Begin Again",
                 "es": "Begin Again",
                 "fr": "New York Melody",
                 "original_title": "Begin Again"
             },
             "posters": {
+                "de": "/crsdkDyPQHDSAAvI05XcSnIBTF9.jpg",
                 "en": "/qx4HXHXt528hS4rwePZbZo20xqZ.jpg",
                 "es": "/kR8tJ89vCBwXEqmyX0ThlyFsXmY.jpg",
                 "fr": "/9B60RUP0Fz7ocR5Lf6Afi1zOfJP.jpg"
@@ -325,12 +365,14 @@
             "image": "img/padrino.jpg",
             "lang": "en",
             "names": {
+                "de": "Der Pate",
                 "en": "The Godfather",
                 "es": "El Padrino",
                 "fr": "Le Parrain",
                 "original_title": "The Godfather"
             },
             "posters": {
+                "de": "/mmXWfTuUHQLi4vUW1o6fe5Jep3E.jpg",
                 "en": "/rPdtLWNsZmAtoZl9PK7S2wE3qiS.jpg",
                 "es": "/6nwJnyac60cGHo4JUtnhdTQsRsx.jpg",
                 "fr": "/j0O2PYvV2INW64jmTc4e5IVqQsz.jpg"
@@ -341,12 +383,14 @@
             "image": "img/pulp.jpg",
             "lang": "en",
             "names": {
+                "de": "Pulp Fiction",
                 "en": "Pulp Fiction",
                 "es": "Pulp Fiction",
                 "fr": "Pulp Fiction",
                 "original_title": "Pulp Fiction"
             },
             "posters": {
+                "de": "/g71Sk6usK5jgkqgJl3ZQ48G7djY.jpg",
                 "en": "/dM2w364MScsjFf8pfMbaWUcWrR.jpg",
                 "es": "/plnlrtBUULT0rh3Xsjmpubiso3L.jpg",
                 "fr": "/7p8x4U3o3p1JZMBqNY3zAlobY3m.jpg"
@@ -357,12 +401,14 @@
             "image": "img/shining.jpg",
             "lang": "en",
             "names": {
+                "de": "Shining",
                 "en": "The Shining",
                 "es": "El resplandor",
                 "fr": "Shining",
                 "original_title": "The Shining"
             },
             "posters": {
+                "de": "/zqVGNC6rkMMvoVObKsGgw3t4bhq.jpg",
                 "en": "/9fgh3Ns1iRzlQNYuJyK0ARQZU7w.jpg",
                 "es": "/49RGBjPWX8lJ8zXfIRRdgvti7l7.jpg",
                 "fr": "/lCVa5zPmAZmzoEXJTyGKSuiW1H9.jpg"
@@ -373,12 +419,14 @@
             "image": "img/sparte.jpg",
             "lang": "en",
             "names": {
+                "de": "300",
                 "en": "300",
                 "es": "300",
                 "fr": "300",
                 "original_title": "300"
             },
             "posters": {
+                "de": "/hYGfZhlZVBRPHxCgV6ZAMJiWix9.jpg",
                 "en": "/bYR8O1H1ZlME7Dm9ysfTYZnRDpw.jpg",
                 "es": "/qysBykDNEW8OV0bccEpLZA1GmKK.jpg",
                 "fr": "/o4aSwp3smtJRJfKd32PSL5H8GZ9.jpg"
@@ -389,12 +437,14 @@
             "image": "img/oss.jpg",
             "lang": "fr",
             "names": {
+                "de": "OSS 117 - Er selbst ist sich genug",
                 "en": "OSS 117: Lost in Rio",
                 "es": "OSS 117: Perdido en R\u00edo",
                 "fr": "OSS 117 : Rio ne r\u00e9pond plus",
                 "original_title": "OSS 117 : Rio ne r\u00e9pond plus"
             },
             "posters": {
+                "de": "/qoBl2lQyG6vshA4gK4JVSURXgNv.jpg",
                 "en": "/5E0abFYCo7ePxebWxKdLGOEx06f.jpg",
                 "es": "/fgrN5IX4IVsfSQMjkZ5hqVty2Un.jpg",
                 "fr": "/zBs9y04GVM31gIl12hoqgcxHVK2.jpg"
@@ -405,12 +455,14 @@
             "image": "img/pod.jpg",
             "lang": "en",
             "names": {
+                "de": "Star Wars: Episode I - Die dunkle Bedrohung",
                 "en": "Star Wars: Episode I - The Phantom Menace",
                 "es": "La guerra de las galaxias. Episodio I: La amenaza fantasma",
                 "fr": "Star Wars, \u00e9pisode I - La Menace fant\u00f4me",
                 "original_title": "Star Wars: Episode I - The Phantom Menace"
             },
             "posters": {
+                "de": "/8cpji1YU088ef3HdOY7TVos1Gl0.jpg",
                 "en": "/n8V09dDc02KsSN6Q4hC2BX6hN8X.jpg",
                 "es": "/wnLXOLmngo0IBLTbGF7DmBTzUrM.jpg",
                 "fr": "/etnrgeks0Al3wSo44Ji6xgaLBAW.jpg"
@@ -421,12 +473,14 @@
             "image": "img/up.jpg",
             "lang": "en",
             "names": {
+                "de": "Oben",
                 "en": "Up",
                 "es": "Up",
                 "fr": "L\u00e0-haut",
                 "original_title": "Up"
             },
             "posters": {
+                "de": "/slhxKys9MCKzmqiHg47OJlfdzEP.jpg",
                 "en": "/nk11pvocdb5zbFhX5oq5YiLPYMo.jpg",
                 "es": "/bGBxsGTiO8eW36SovNcKASZumOP.jpg",
                 "fr": "/fhPsHld7wU1JlgnTZTFBVuF0Dq6.jpg"
@@ -437,12 +491,14 @@
             "image": "img/west.jpg",
             "lang": "en",
             "names": {
+                "de": "West Side Story",
                 "en": "West Side Story",
                 "es": "West Side Story",
                 "fr": "West Side Story",
                 "original_title": "West Side Story"
             },
             "posters": {
+                "de": "/uHU3ACO3nXfExyMrINF9RoLcg0b.jpg",
                 "en": "/zRQhCSREdR9h4OzEVvwhdlZNZ6m.jpg",
                 "es": "/fhdQlbNHAbZsZqxMJCDJgdvOOOX.jpg",
                 "fr": "/lZ7CR15ZAQnpFUTIXh1rR44i0Jy.jpg"
@@ -453,12 +509,14 @@
             "image": "img/prenom.jpg",
             "lang": "fr",
             "names": {
+                "de": "Der Vorname",
                 "en": "What's in a Name",
                 "es": "El nombre (Le pr\u00e9nom)",
                 "fr": "Le Pr\u00e9nom",
                 "original_title": "Le Pr\u00e9nom"
             },
             "posters": {
+                "de": "/tliSwa0hIp1OHNJqbIwUun3Sxfq.jpg",
                 "en": "/pGsBX3XKrIS4uP6lNPnhg9TR7HY.jpg",
                 "es": "/iZXaVV5GIJpDekXW2Imxpb6aLjr.jpg",
                 "fr": "/pGsBX3XKrIS4uP6lNPnhg9TR7HY.jpg"
@@ -469,12 +527,14 @@
             "image": "img/totoro.jpg",
             "lang": "ja",
             "names": {
+                "de": "Mein Nachbar Totoro",
                 "en": "My Neighbor Totoro",
                 "es": "Mi vecino Totoro",
                 "fr": "Mon voisin Totoro",
                 "original_title": "\u3068\u306a\u308a\u306e\u30c8\u30c8\u30ed"
             },
             "posters": {
+                "de": "/r3s5FBewGRtVp8J78EuWrdkZyF0.jpg",
                 "en": "/2i0OOjvi7CqNQA6ZtYJtL65P9oZ.jpg",
                 "es": "/37v1ABRuDJLddL1uegJAbuIuhmw.jpg",
                 "fr": "/6hGEAWckh2kZigsDHSHnjf56iTx.jpg"
@@ -485,12 +545,14 @@
             "image": "img/whip.jpg",
             "lang": "en",
             "names": {
+                "de": "Whiplash",
                 "en": "Whiplash",
                 "es": "Whiplash",
                 "fr": "Whiplash",
                 "original_title": "Whiplash"
             },
             "posters": {
+                "de": "/lktTqUHzaiPP9y77xsfYqBcFhDH.jpg",
                 "en": "/lktTqUHzaiPP9y77xsfYqBcFhDH.jpg",
                 "es": "/lktTqUHzaiPP9y77xsfYqBcFhDH.jpg",
                 "fr": "/lktTqUHzaiPP9y77xsfYqBcFhDH.jpg"
@@ -501,12 +563,14 @@
             "image": "img/pirate.jpg",
             "lang": "en",
             "names": {
+                "de": "Fluch der Karibik",
                 "en": "Pirates of the Caribbean: The Curse of the Black Pearl",
                 "es": "Piratas del Caribe. La maldici\u00f3n de la Perla Negra",
                 "fr": "Pirates des Cara\u00efbes : La Mal\u00e9diction du Black Pearl",
                 "original_title": "Pirates of the Caribbean: The Curse of the Black Pearl"
             },
             "posters": {
+                "de": "/7dKv4V9T8larDhU2frMQZlvffCV.jpg",
                 "en": "/tkt9xR1kNX5R9rCebASKck44si2.jpg",
                 "es": "/8zHnkTGyAImBcI49a1xFJHUjbaK.jpg",
                 "fr": "/6NSeMklnzIshQ2wSZjtZwMRqNf6.jpg"
@@ -517,12 +581,14 @@
             "image": "img/sin.jpg",
             "lang": "en",
             "names": {
+                "de": "Sin City",
                 "en": "Sin City",
                 "es": "Sin City, Ciudad del pecado",
                 "fr": "Sin City",
                 "original_title": "Sin City"
             },
             "posters": {
+                "de": "/1wqxAhCFVZFEU81mj8pL7TJaBTQ.jpg",
                 "en": "/vKJVGOKPyWqp9d2EX5NH1liqRqR.jpg",
                 "es": "/1sCP6x6MdJ6Tod8f7ZXVFzMlmx9.jpg",
                 "fr": "/1wAAAjJhOsSjjg5Tms1E9XKuWAw.jpg"
@@ -533,12 +599,14 @@
             "image": "img/titanic.jpg",
             "lang": "en",
             "names": {
+                "de": "Titanic",
                 "en": "Titanic",
                 "es": "Titanic",
                 "fr": "Titanic",
                 "original_title": "Titanic"
             },
             "posters": {
+                "de": "/19onjucXI8cwG6hvXpiGJaIbfY8.jpg",
                 "en": "/kHXEpyfl6zqn8a6YuozZUujufXf.jpg",
                 "es": "/zraTDtulFw2wrpyuYf646k95MNq.jpg",
                 "fr": "/vpsvHLkoeKUjceIMeNSqCp3xEyY.jpg"

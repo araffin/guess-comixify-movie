@@ -7,12 +7,55 @@ from pprint import pprint
 import tmdbsimple as tmdb
 from PyInquirer import prompt, style_from_dict, Token
 
-from generate import Movie, write_movies_json, movies_list, load_movies
+
+class Movie(object):
+    """
+    :param image: (str)
+    :param id: (int)
+    :param names: ([str])
+    :param posters: ([str])
+    :param lang: (str)
+    """
+    def __init__(self, image, id, *, names, posters, lang):
+        super(Movie, self).__init__()
+        self.image = image
+        self.names = names
+        self.id = id
+        self.posters = posters
+        self.lang = lang
+
+
+def load_movies():
+    """
+    :return: ([dict])
+    """
+    movies = None
+    with open('data.json', 'r') as fh:
+        movies = json.load(fh)['movies']
+    return movies
+
+
+def write_movies_json(movies):
+    """
+    :param movies: ([dict])
+    """
+    print("{} movies".format(len(movies)))
+
+    data = {'movies': movies}
+
+    with open('data.json', 'w') as fh:
+        json.dump(data, fh, indent=4, sort_keys=True)
+
+
+# Use to add movies in a batch
+movies_list = [
+    ['img/titanic.jpg', 597]
+]
 
 # Max 5 request per second
 # in fact 40 request every 10 seconds
 RATE = 1 / 5
-LANGUAGES = ['en', 'fr', 'es']
+LANGUAGES = ['en', 'fr', 'es', 'de']
 
 custom_style_2 = style_from_dict({
     Token.Separator: '#6C6C6C',
@@ -31,10 +74,16 @@ if not os.path.isfile('.api_key'):
 with open('.api_key', 'r') as fh:
     tmdb.API_KEY = fh.read().strip()
 
-def get_movie_infos(movie_id):
+def get_movie_infos(movie_id, languages=None):
+    """
+    :param movie_id: (int)
+    :param languages: ([str])
+    """
+    if languages is None:
+        languages = LANGUAGES
     movie = tmdb.Movies(movie_id)
     names, posters = {}, {}
-    for lang in LANGUAGES:
+    for lang in languages:
         movie_infos = movie.info(language=lang)
         names[lang] = movie_infos['title']
         posters[lang] = movie_infos['poster_path']
@@ -46,6 +95,7 @@ def get_movie_infos(movie_id):
 intentions = {
     'Search for a movie': 'search',
     'Call The Movie DB api': 'call',
+    'Add a lang': 'add_lang',
 }
 
 intention_prompt = {
@@ -131,5 +181,26 @@ elif intention == 'call':
             lang=lang
         ).__dict__
         movies.append(movie_dict)
+
+    write_movies_json(movies)
+
+elif intention == 'add_lang':
+    movies = load_movies()
+
+    lang_prompt = {
+        'type': 'input',
+        'name': 'lang',
+        'message': 'Which lang?',
+    }
+
+    lang = prompt(lang_prompt)['lang']
+
+    for idx in range(len(movies)):
+        movie_id = movies[idx]['id']
+        print(idx, movies[idx]['names']['original_title'])
+        names, posters, _ = get_movie_infos(movie_id, languages=[lang])
+        movies[idx]['names'][lang] = names[lang]
+        movies[idx]['posters'][lang] = posters[lang]
+
 
     write_movies_json(movies)
