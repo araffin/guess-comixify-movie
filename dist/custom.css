@@ -14,3 +14,19 @@ body{
 .hide {
   opacity: 0;
 }
+
+.poster{
+  max-height: 340px
+}
+
+.movie-comix{
+  max-height:85%;
+  max-height:85vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .movie-comix{
+    max-height:100%;
+    max-height:100vh;
+  }
+}
