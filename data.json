@@ -629,6 +629,132 @@
                 "es": "/suoz4D4dctVraPhC8HqD5xnpfsa.jpg",
                 "fr": "/pVc73MJKaXuI7nJ55Z5fMTEKid1.jpg"
             }
+        },
+        {
+            "id": 62,
+            "image": "img/2001.jpg",
+            "lang": "en",
+            "names": {
+                "de": "2001: Odyssee im Weltraum",
+                "en": "2001: A Space Odyssey",
+                "es": "2001: Una odisea del espacio",
+                "fr": "2001 l'Odyss\u00e9e de l'espace",
+                "original_title": "2001: A Space Odyssey"
+            },
+            "posters": {
+                "de": "/1nMIyBkc5JXTyiJMv3il11Pf01g.jpg",
+                "en": "/90T7b2LIrL07ndYQBmSm09yqVEH.jpg",
+                "es": "/sln50uQYigvu5AvN72JfYfu1ckq.jpg",
+                "fr": "/28k8psDQ32ROvfHlvEoH8OGCas6.jpg"
+            }
+        },
+        {
+            "id": 152601,
+            "image": "img/her.jpg",
+            "lang": "en",
+            "names": {
+                "de": "Her",
+                "en": "Her",
+                "es": "Her",
+                "fr": "Her",
+                "original_title": "Her"
+            },
+            "posters": {
+                "de": "/fsoTLnUXEUTNuVCBxAJMY0HPPd.jpg",
+                "en": "/fsoTLnUXEUTNuVCBxAJMY0HPPd.jpg",
+                "es": "/zu5oyq47nMyz6JNA2SJJT1eOeyR.jpg",
+                "fr": "/7XCeiKfxb8BNoXu4UzrZPuBvuea.jpg"
+            }
+        },
+        {
+            "id": 118340,
+            "image": "img/gard.jpg",
+            "lang": "en",
+            "names": {
+                "de": "Guardians of the Galaxy",
+                "en": "Guardians of the Galaxy",
+                "es": "Guardianes de la galaxia",
+                "fr": "Les Gardiens de la Galaxie",
+                "original_title": "Guardians of the Galaxy"
+            },
+            "posters": {
+                "de": "/wMCqZ0aS4QsO8i8mhQLtHYHPtCB.jpg",
+                "en": "/y31QB9kn3XSudA15tV7UWQ9XLuW.jpg",
+                "es": "/9Ju7p4daJi5rcTUghYZxHlP15ia.jpg",
+                "fr": "/dNjU7iyH8X5FmTYNYiC9DwqlsiS.jpg"
+            }
+        },
+        {
+            "id": 137113,
+            "image": "img/edge.jpg",
+            "lang": "en",
+            "names": {
+                "de": "Edge of Tomorrow",
+                "en": "Edge of Tomorrow",
+                "es": "Al filo del ma\u00f1ana",
+                "fr": "Edge of Tomorrow",
+                "original_title": "Edge of Tomorrow"
+            },
+            "posters": {
+                "de": "/liEQAsS7WXwJVnb5J1eYPIDsTWc.jpg",
+                "en": "/tpoVEYvm6qcXueZrQYJNRLXL88s.jpg",
+                "es": "/xEzDzqNJerVMKwdVKU7ZOtlPVZ7.jpg",
+                "fr": "/fJXVF4BvD83CGmJaAgUQ5xQoyLe.jpg"
+            }
+        },
+        {
+            "id": 106646,
+            "image": "img/wolf.jpg",
+            "lang": "en",
+            "names": {
+                "de": "The Wolf of Wall Street",
+                "en": "The Wolf of Wall Street",
+                "es": "El lobo de Wall Street",
+                "fr": "Le Loup de Wall Street",
+                "original_title": "The Wolf of Wall Street"
+            },
+            "posters": {
+                "de": "/15OW6yNvOLs2BGsTD3ciSS2ZkOc.jpg",
+                "en": "/vK1o5rZGqxyovfIhZyMELhk03wO.jpg",
+                "es": "/jTlIYjvS16XOpsfvYCTmtEHV10K.jpg",
+                "fr": "/dQIQZbJXn1pflQw3nwvXLJX0dHa.jpg"
+            }
+        },
+        {
+            "id": 106,
+            "image": "img/pred.jpg",
+            "lang": "en",
+            "names": {
+                "de": "Predator",
+                "en": "Predator",
+                "es": "Depredador",
+                "fr": "Predator",
+                "original_title": "Predator"
+            },
+            "posters": {
+                "de": "/nVwF3CPGYrgPSm1t5CT7068uSZv.jpg",
+                "en": "/gUpto7r2XwoM5eW7MUvd8hl1etB.jpg",
+                "es": "/peIBDXNUvKmnUZElFoZ9A0ZY4qu.jpg",
+                "fr": "/6E0shu2iXpz4PnM6i0ScfxfHWBm.jpg"
+            }
+        },
+        {
+            "id": 13,
+            "image": "img/forest.jpg",
+            "lang": "en",
+            "names": {
+                "de": "Forrest Gump",
+                "en": "Forrest Gump",
+                "es": "Forrest Gump",
+                "fr": "Forrest Gump",
+                "original_title": "Forrest Gump"
+            },
+            "posters": {
+                "de": "/nntasdgJ4cyIPIZYpvmPyhz1cQ5.jpg",
+                "en": "/yE5d3BUhE8hCnkMUJOo1QDoOGNz.jpg",
+                "es": "/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg",
+                "fr": "/4D8CoCW07df1Ryb2qFyY7lxBRGK.jpg"
+            }
         }
     ]
 }
