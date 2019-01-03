@@ -1,7 +1,7 @@
 import os
 import subprocess
 
-folder = 'img/'
+folder = 'in/'
 
 images = [im for im in os.listdir(folder) if im.endswith('.jpg') or im.endswith('.png')]
 

@@ -611,6 +611,24 @@
                 "es": "/zraTDtulFw2wrpyuYf646k95MNq.jpg",
                 "fr": "/vpsvHLkoeKUjceIMeNSqCp3xEyY.jpg"
             }
+        },
+        {
+            "id": 6479,
+            "image": "img/legend.jpg",
+            "lang": "en",
+            "names": {
+                "de": "I Am Legend",
+                "en": "I Am Legend",
+                "es": "Soy leyenda",
+                "fr": "Je suis une l\u00e9gende",
+                "original_title": "I Am Legend"
+            },
+            "posters": {
+                "de": "/9skUuHTFtsJznuFPwmB17ZZvq09.jpg",
+                "en": "/6OA0I8hhW9zftWoCYxJAzXW9UIN.jpg",
+                "es": "/suoz4D4dctVraPhC8HqD5xnpfsa.jpg",
+                "fr": "/pVc73MJKaXuI7nJ55Z5fMTEKid1.jpg"
+            }
         }
     ]
 }
