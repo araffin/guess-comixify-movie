@@ -7,10 +7,12 @@ from pprint import pprint
 import tmdbsimple as tmdb
 from PyInquirer import prompt, style_from_dict, Token
 
-from generate import Movie, generate_movies_json, movies
+from generate import Movie, write_movies_json, movies_list, load_movies
 
 # Max 5 request per second
+# in fact 40 request every 10 seconds
 RATE = 1 / 5
+LANGUAGES = ['en', 'fr', 'es']
 
 custom_style_2 = style_from_dict({
     Token.Separator: '#6C6C6C',
@@ -29,10 +31,21 @@ if not os.path.isfile('.api_key'):
 with open('.api_key', 'r') as fh:
     tmdb.API_KEY = fh.read().strip()
 
+def get_movie_infos(movie_id):
+    movie = tmdb.Movies(movie_id)
+    names, posters = {}, {}
+    for lang in LANGUAGES:
+        movie_infos = movie.info(language=lang)
+        names[lang] = movie_infos['title']
+        posters[lang] = movie_infos['poster_path']
+        names['original_title'] = movie_infos['original_title']
+        time.sleep(RATE)
+
+    return names, posters, movie_infos['original_language']
+
 intentions = {
     'Search for a movie': 'search',
     'Call The Movie DB api': 'call',
-    'Generate data.json file': 'generate',
 }
 
 intention_prompt = {
@@ -46,6 +59,7 @@ intention_prompt = {
 intention = prompt(intention_prompt)['intention']
 
 if intention == 'search':
+    movies = load_movies()
     movie_title_prompt = {
         'type': 'input',
         'name': 'query',
@@ -71,23 +85,12 @@ if intention == 'search':
 
     movie_id = prompt(movie_id_prompt)['movie_id']
 
-    movie = tmdb.Movies(movie_id)
-    movie_infos = movie.info()
+    names, posters, lang = get_movie_infos(movie_id)
 
-    # TODO: Get ALternative titles + Get Images
+    # Get ALternative titles + Get Images
+    # movie.alternative_titles()
     # time.sleep(RATE)
-    # connection = http.client.HTTPSConnection("api.themoviedb.org")
-    # payload = "{}"
-    #
-    # connection.request("GET", "/3/movie/{}/alternative_titles?api_key={}".format(movie_id, tmdb.API_KEY), payload)
-    # data = connection.getresponse().read()
-    # titles = json.loads(data.decode('utf-8'))['titles']
-    # pprint(titles)
-    #
-    # connection.request("GET", "/3/movie/{}/images?api_key={}".format(movie_id, tmdb.API_KEY), payload)
-    # data = connection.getresponse().read()
-    # images = json.loads(data.decode('utf-8'))['posters']
-    # pprint(images)
+    # movie.images()
 
     comix_prompt = {
         'type': 'input',
@@ -101,39 +104,32 @@ if intention == 'search':
     if not image_path.endswith('.jpg'):
         image_path += '.jpg'
 
-    names = {
-        'en': movie_infos['title'],
-        'fr': '',
-        'original_title': movie_infos['original_title']
-    }
-
     movie_obj = Movie(
         image_path,
-        names,
         id=movie_id,
-        poster=movie_infos['poster_path']
+        names=names,
+        posters=posters,
+        lang=lang
     )
     pprint(movie_obj.__dict__)
+    movies['movies'].append(movie_obj.__dict__)
+    write_movies_json(movies)
 
 elif intention == 'call':
-    new_movies = []
-    for idx, movie_dict in enumerate(movies):
-        print(idx, movie_dict['names'][0])
-        movie = tmdb.Movies(movie_dict['id'])
-        movie_infos = movie.info()
-        names = {
-            'en': movie_infos['title'],
-            'fr': '',
-            'original_title': movie_infos['original_title']
-        }
+    movies = []
+    for idx in range(len(movies_list)):
+        image_path, movie_id = movies_list[idx]
+        print(idx, image_path)
 
-        new_movie_dict = Movie(
-            movie_dict['image'],
-            names,
-            id=movie_dict['id'],
-            poster=movie_infos['poster_path']
+        names, posters, lang = get_movie_infos(movie_id)
+
+        movie_dict = Movie(
+            image_path,
+            id=movie_id,
+            names=names,
+            posters=posters,
+            lang=lang
         ).__dict__
-        new_movies.append(new_movie_dict)
-    generate_movies_json(new_movies)
-else:
-    generate_movies_json(movies)
+        movies.append(movie_dict)
+
+    write_movies_json(movies)
