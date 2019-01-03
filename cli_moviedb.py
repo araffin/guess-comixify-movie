@@ -112,11 +112,11 @@ if intention == 'search':
         lang=lang
     )
     pprint(movie_obj.__dict__)
-    movies['movies'].append(movie_obj.__dict__)
+    movies.append(movie_obj.__dict__)
     write_movies_json(movies)
 
 elif intention == 'call':
-    movies = []
+    movies = load_movies()
     for idx in range(len(movies_list)):
         image_path, movie_id = movies_list[idx]
         print(idx, image_path)

@@ -6,6 +6,7 @@ const N_MOVIES = 10;
 const BASE_POSTER_URL = 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/';
 const BASE_MOVIE_DB = 'https://www.themoviedb.org/movie/';
 const MIN_DELAY = 200; // ms between answer check
+let lang = 'en';
 
 disintegrate.init();
 
@@ -75,10 +76,10 @@ ready(function ()
   }
 
   function addMovieInfos() {
-    movie_title.textContent = movies[current_idx].names[0];
+    movie_title.textContent = movies[current_idx].names[lang];
     movie_more_button.href = BASE_MOVIE_DB + movies[current_idx].id;
     show(movie_more_button);
-    movie_poster.src = BASE_POSTER_URL + movies[current_idx].poster;
+    movie_poster.src = BASE_POSTER_URL + movies[current_idx].posters[lang];
   }
 
   if(document.querySelector('[data-dis-type="simultaneous"]')) {
@@ -118,7 +119,7 @@ ready(function ()
     for (let i = 0; i < movies.length; i++) {
       let success = results[i] == 1;
       let class_ = success ?  'text-success' : 'text-error';
-      html += `<p class=${class_}>${i + 1}. ${movies[i].names[0]}</p>`
+      html += `<p class=${class_}>${i + 1}. ${movies[i].names[lang]}</p>`
     }
     let card_body = results_card.querySelector('.card-body');
     card_body.innerHTML = html;
@@ -257,17 +258,19 @@ ready(function ()
 
     let successful_trial = false;
     resetState();
-    for (let i = 0; i < movies[current_idx].names.length; i++)
-    {
-      let name = movies[current_idx].names[i];
+
+    let langs = Object.keys(movies[current_idx].names);
+    langs.forEach(function(lang_key) {
+      let name = movies[current_idx].names[lang_key];
       let similarity = compareTwoStrings(guess, name.toLowerCase());
       if (similarity > MIN_SIMILARITY)
       {
         success();
         successful_trial = true;
-        break;
+        return;
       }
-    }
+
+    });
 
     if (!successful_trial) {
       failure();
