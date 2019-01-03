@@ -12,9 +12,7 @@ class Movie(object):
 
 # Use to add movies in a batch
 movies_list = [
-            # [
-            #     'img/0.jpg', 28,
-            # ],
+    ['img/titanic.jpg', 597]
 ]
 
 
