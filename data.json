@@ -863,6 +863,150 @@
                 "es": "/mwWHEbVMOdWODpKr5N6JE6VtSS5.jpg",
                 "fr": "/8JzKYQzWYJdWwAXX6mdzcUIPsMK.jpg"
             }
+        },
+        {
+            "id": 318846,
+            "image": "img/casse.jpg",
+            "lang": "en",
+            "names": {
+                "de": "The Big Short",
+                "en": "The Big Short",
+                "es": "La Gran Apuesta",
+                "fr": "The Big Short\u00a0: Le casse du si\u00e8cle",
+                "original_title": "The Big Short"
+            },
+            "posters": {
+                "de": "/dtEfeVoAV0nShf5QntmPLM0vQaZ.jpg",
+                "en": "/p11Ftd4VposrAzthkhF53ifYZRl.jpg",
+                "es": "/p8bPJXPOZqGw8khHAAr0yUQxcGz.jpg",
+                "fr": "/hD8X1iKLfSzllaaFEAhbp13E6rc.jpg"
+            }
+        },
+        {
+            "id": 264660,
+            "image": "img/ex.jpg",
+            "lang": "en",
+            "names": {
+                "de": "Ex Machina",
+                "en": "Ex Machina",
+                "es": "Ex_Machina",
+                "fr": "Ex Machina",
+                "original_title": "Ex Machina"
+            },
+            "posters": {
+                "de": "/mBIbv6p17g8aE4dhrOvsetph7Yk.jpg",
+                "en": "/btbRB7BrD887j5NrvjxceRDmaot.jpg",
+                "es": "/94gszl6b8BKC3RvoHDsgL4MDO6J.jpg",
+                "fr": "/g5wCzYNpW6y13Y446PQoBDyjWdc.jpg"
+            }
+        },
+        {
+            "id": 782,
+            "image": "img/gattaca.jpg",
+            "lang": "en",
+            "names": {
+                "de": "Gattaca",
+                "en": "Gattaca",
+                "es": "Gattaca",
+                "fr": "Bienvenue \u00e0 Gattaca",
+                "original_title": "Gattaca"
+            },
+            "posters": {
+                "de": "/7XMbFy8DJlb8Zkem5yr0TDdm3Zd.jpg",
+                "en": "/gPYtuvhQvP7v5F1Tqt2iQWR3Y7i.jpg",
+                "es": "/6B6IoLbXQR4V7AhQLYYp63X6GXD.jpg",
+                "fr": "/7Gj1i9ajRPB9puaHrxKxjmclRQY.jpg"
+            }
+        },
+        {
+            "id": 273248,
+            "image": "img/hateful.jpg",
+            "lang": "en",
+            "names": {
+                "de": "The Hateful 8",
+                "en": "The Hateful Eight",
+                "es": "Los odiosos ocho",
+                "fr": "Les 8 Salopards",
+                "original_title": "The Hateful Eight"
+            },
+            "posters": {
+                "de": "/uGAZgetAXpQhn1kAO09qroq55W0.jpg",
+                "en": "/fqe8JxDNO8B8QfOGTdjh6sPCdSC.jpg",
+                "es": "/qC6EfdhPW6X3zjRvLsflayI9cKy.jpg",
+                "fr": "/sRq90sQq7S68wWnAk9eBxFAvWVz.jpg"
+            }
+        },
+        {
+            "id": 667,
+            "image": "img/live_twice.jpg",
+            "lang": "en",
+            "names": {
+                "de": "James Bond 007 - Man lebt nur zweimal",
+                "en": "You Only Live Twice",
+                "es": "S\u00f3lo se vive dos veces",
+                "fr": "On ne vit que deux fois",
+                "original_title": "You Only Live Twice"
+            },
+            "posters": {
+                "de": "/wpnEYWEGpy3q4fuZkGdxuB2laQU.jpg",
+                "en": "/7dnsJZniZK1Hbc9mOFDYa5W0dHi.jpg",
+                "es": "/5a7rhwVzW8j96j2tW9HmQCtxLgq.jpg",
+                "fr": "/scW4a29MST7kpjrBZ000nK83ReB.jpg"
+            }
+        },
+        {
+            "id": 105,
+            "image": "img/marty.jpg",
+            "lang": "en",
+            "names": {
+                "de": "Zur\u00fcck in die Zukunft",
+                "en": "Back to the Future",
+                "es": "Regreso al futuro",
+                "fr": "Retour vers le futur",
+                "original_title": "Back to the Future"
+            },
+            "posters": {
+                "de": "/9GUjt9mL5PhO1FHKhj22XvYNG9d.jpg",
+                "en": "/pTpxQB1N0waaSc3OSn0e9oc8kx9.jpg",
+                "es": "/xS3k4YTyt5DdaLmbDGxdioi2v3w.jpg",
+                "fr": "/mAZwHkJJtIkZT5jjrbTKbBVOrNN.jpg"
+            }
+        },
+        {
+            "id": 180,
+            "image": "img/minority.jpg",
+            "lang": "en",
+            "names": {
+                "de": "Minority Report",
+                "en": "Minority Report",
+                "es": "Minority Report",
+                "fr": "Minority Report",
+                "original_title": "Minority Report"
+            },
+            "posters": {
+                "de": "/9niGbmFeaR27pu7cPuQQrStkLlt.jpg",
+                "en": "/h3lpltSn7Rj1eYTPQO1lYGdw4Bz.jpg",
+                "es": "/pnMZXcdCjvUe8Gm7sjG8blRYDCX.jpg",
+                "fr": "/27qsa8Rp9HazMiVwjezIILMKI1e.jpg"
+            }
+        },
+        {
+            "id": 190859,
+            "image": "img/sniper.jpg",
+            "lang": "en",
+            "names": {
+                "de": "American Sniper",
+                "en": "American Sniper",
+                "es": "El francotirador",
+                "fr": "American Sniper",
+                "original_title": "American Sniper"
+            },
+            "posters": {
+                "de": "/ie4lA9UVcvmJZDMsaNrfcbKRCeD.jpg",
+                "en": "/svPHnYE7N5NAGO49dBmRhq0vDQ3.jpg",
+                "es": "/4WxmCmJbKxLDHWSaLHNttBqOGnE.jpg",
+                "fr": "/9BEN7zRpoLBaBU3t97kPJkHUgnv.jpg"
+            }
         }
     ]
 }
