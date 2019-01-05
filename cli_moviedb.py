@@ -49,7 +49,7 @@ def write_movies_json(movies):
 
 # Use to add movies in a batch
 movies_list = [
-    ['img/pred.jpg', 106]
+    ['img/desp.jpg', 8068]
 ]
 
 # Max 5 request per second
@@ -124,6 +124,10 @@ if intention == 'search':
     results = {}
     for s in search.results:
         results[s['title']] = s['id']
+
+    if len(results) == 0:
+        print("No movie found!")
+        exit(0)
 
     movie_id_prompt = {
         'type': 'list',
