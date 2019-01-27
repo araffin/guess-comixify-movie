@@ -1187,6 +1187,150 @@
                 "es": "/vZ3YJI7gNWY777vLtdeIDUJlqHG.jpg",
                 "fr": "/lgiimcIbkAMnm6hX5VY3hxRRqnu.jpg"
             }
+        },
+        {
+            "id": 73,
+            "image": "img/am_hist.jpg",
+            "lang": "en",
+            "names": {
+                "de": "American History X",
+                "en": "American History X",
+                "es": "American History X",
+                "fr": "American History X",
+                "original_title": "American History X"
+            },
+            "posters": {
+                "de": "/5lyyDV14pWXImv73KW3yMEt5agO.jpg",
+                "en": "/fXepRAYOx1qC3wju7XdDGx60775.jpg",
+                "es": "/1L9Je8vZPIEoCYJCCNfwNsJ0xgn.jpg",
+                "fr": "/drVNUpvIvJ1UivX7pLFSvOZlmQO.jpg"
+            }
+        },
+        {
+            "id": 935,
+            "image": "img/dr.jpg",
+            "lang": "en",
+            "names": {
+                "de": "Dr. Seltsam oder: Wie ich lernte, die Bombe zu lieben",
+                "en": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+                "es": "\u00bfTel\u00e9fono rojo? Volamos hacia Mosc\u00fa",
+                "fr": "Dr Folamour",
+                "original_title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb"
+            },
+            "posters": {
+                "de": "/5nYKVDPr3mKazVyLiPVq3jYxGvY.jpg",
+                "en": "/tviJ68Wj4glQk3CPMvdvExYHxX.jpg",
+                "es": "/u8Bllr0BV5KxhH83pSpRe2NrvvJ.jpg",
+                "fr": "/kzeH0qI7j8OphsrLtb8peapgbuw.jpg"
+            }
+        },
+        {
+            "id": 64690,
+            "image": "img/drive.jpg",
+            "lang": "en",
+            "names": {
+                "de": "Drive",
+                "en": "Drive",
+                "es": "Drive",
+                "fr": "Drive",
+                "original_title": "Drive"
+            },
+            "posters": {
+                "de": "/nUNJH3LSwoETiG7Zbb0rFM4mujD.jpg",
+                "en": "/nu7XIa67cXc2t7frXCE5voXUJcN.jpg",
+                "es": "/tQq9vJLmj01aA5gmXoBJ5lzypr2.jpg",
+                "fr": "/62iZpzHnm2fTUGFZ2N5fP5END30.jpg"
+            }
+        },
+        {
+            "id": 14756,
+            "image": "img/ip.jpg",
+            "lang": "cn",
+            "names": {
+                "de": "Ip Man",
+                "en": "Ip Man",
+                "es": "Ip Man",
+                "fr": "Ip Man",
+                "original_title": "\u8449\u554f"
+            },
+            "posters": {
+                "de": "/7PDALYKsEWPSCiLIwX05OBFXzFo.jpg",
+                "en": "/8knFfuqW289DJi2cpPl4RVTDkbo.jpg",
+                "es": "/8knFfuqW289DJi2cpPl4RVTDkbo.jpg",
+                "fr": "/lVT33pe3qY8Pgefbwl05V3EWahX.jpg"
+            }
+        },
+        {
+            "id": 629,
+            "image": "img/usual.jpg",
+            "lang": "en",
+            "names": {
+                "de": "Die \u00fcblichen Verd\u00e4chtigen",
+                "en": "The Usual Suspects",
+                "es": "Sospechosos habituales",
+                "fr": "Usual suspects",
+                "original_title": "The Usual Suspects"
+            },
+            "posters": {
+                "de": "/mmsi9fFifvqDvgf1FPYd9ge3l9v.jpg",
+                "en": "/jgJoRWltoS17nD5MAQ1yK2Ztefw.jpg",
+                "es": "/zI2ESVtVBJTo68aWuwCku78q4dZ.jpg",
+                "fr": "/jUr9X32cZDzZWG0pnFe6BcnUHcn.jpg"
+            }
+        },
+        {
+            "id": 24,
+            "image": "img/kill.jpg",
+            "lang": "en",
+            "names": {
+                "de": "Kill Bill - Volume 1",
+                "en": "Kill Bill: Vol. 1",
+                "es": "Kill Bill: Volumen 1",
+                "fr": "Kill Bill : Volume 1",
+                "original_title": "Kill Bill: Vol. 1"
+            },
+            "posters": {
+                "de": "/dwgRmQwySxZpw2qkn2MG3VvMmx1.jpg",
+                "en": "/v7TaX8kXMXs5yFFGR41guUDNcnB.jpg",
+                "es": "/lfj709InbmljVqAXgUk2qjnujNN.jpg",
+                "fr": "/wHc7Kb66icpaKLrrBcTnaxa5B3n.jpg"
+            }
+        },
+        {
+            "id": 98,
+            "image": "img/glad.jpg",
+            "lang": "en",
+            "names": {
+                "de": "Gladiator",
+                "en": "Gladiator",
+                "es": "Gladiator",
+                "fr": "Gladiator",
+                "original_title": "Gladiator"
+            },
+            "posters": {
+                "de": "/s27uvYBLhS4y8fCgGY50V1c2JR5.jpg",
+                "en": "/6WBIzCgmDCYrqh64yDREGeDk9d3.jpg",
+                "es": "/iEzmvwybdubElRG0MkqHNS5o92.jpg",
+                "fr": "/3IGZhnjEzZwStzcNOfwICfWikrX.jpg"
+            }
+        },
+        {
+            "id": 111,
+            "image": "img/scar.jpg",
+            "lang": "en",
+            "names": {
+                "de": "Scarface",
+                "en": "Scarface",
+                "es": "El precio del poder",
+                "fr": "Scarface",
+                "original_title": "Scarface"
+            },
+            "posters": {
+                "de": "/vxpo40uVsrBTFYTGZQ058UOTZa3.jpg",
+                "en": "/zr2p353wrd6j3wjLgDT4TcaestB.jpg",
+                "es": "/3iPAkVtHpdkAcbbB043JYPhFWsX.jpg",
+                "fr": "/pIFZCbL2t6J4cAWQuFiiHkJJs1z.jpg"
+            }
         }
     ]
 }
