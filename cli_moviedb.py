@@ -49,7 +49,7 @@ def write_movies_json(movies):
 
 # Use to add movies in a batch
 movies_list = [
-    ['img/scar.jpg', 111]
+    ['img/memento.jpg', 77]
 ]
 
 # Max 5 request per second
