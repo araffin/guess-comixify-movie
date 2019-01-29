@@ -1045,24 +1045,6 @@
             }
         },
         {
-            "id": 190790,
-            "image": "img/casino.jpg",
-            "lang": "cn",
-            "names": {
-                "de": "Casino",
-                "en": "Casino",
-                "es": "Casino",
-                "fr": "Casino",
-                "original_title": "Ho kong fung wan"
-            },
-            "posters": {
-                "de": "/3ZVdcFlMz9LSUlMKeS54zpg5RGY.jpg",
-                "en": "/3ZVdcFlMz9LSUlMKeS54zpg5RGY.jpg",
-                "es": "/3ZVdcFlMz9LSUlMKeS54zpg5RGY.jpg",
-                "fr": "/3ZVdcFlMz9LSUlMKeS54zpg5RGY.jpg"
-            }
-        },
-        {
             "id": 110415,
             "image": "img/snow.jpg",
             "lang": "ko",
@@ -1330,6 +1312,24 @@
                 "en": "/fQMSaP88cf1nz4qwuNEEFtazuDM.jpg",
                 "es": "/neHrQLVfT3KPqvv30pNPyRb6chQ.jpg",
                 "fr": "/wqG9YXPBpDbC4NpV1Xc42BOm2hO.jpg"
+            }
+        },
+        {
+            "id": 524,
+            "image": "img/casino.jpg",
+            "lang": "en",
+            "names": {
+                "de": "Casino",
+                "en": "Casino",
+                "es": "Casino",
+                "fr": "Casino",
+                "original_title": "Casino"
+            },
+            "posters": {
+                "de": "/95dl69p0U4uSQisWR4tNifVdrh7.jpg",
+                "en": "/jC0dqpkRMwh3A1X2PHahTxOaLbp.jpg",
+                "es": "/c8lxFlMxcWICptk9RYDyL8B1LHm.jpg",
+                "fr": "/mWd03gDfHhk72B859a28cbXih1z.jpg"
             }
         }
     ]
