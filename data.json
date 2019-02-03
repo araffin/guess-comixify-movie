@@ -1081,24 +1081,6 @@
             }
         },
         {
-            "id": 87516,
-            "image": "img/oldboy.jpg",
-            "lang": "en",
-            "names": {
-                "de": "Oldboy",
-                "en": "Oldboy",
-                "es": "Old boy",
-                "fr": "Oldboy",
-                "original_title": "Oldboy"
-            },
-            "posters": {
-                "de": "/ZgxZVNfwaGAXygqAJ5Z2v2SBaH.jpg",
-                "en": "/cmspwpe1usgG5hYijfEcTrueKRC.jpg",
-                "es": "/uQGVOSogtPkhsf68yBJPOY8KN1f.jpg",
-                "fr": "/ngv4owoHFjJjzdNz7jEJHaBGbQX.jpg"
-            }
-        },
-        {
             "id": 1955,
             "image": "img/elephant.jpg",
             "lang": "en",
@@ -1330,6 +1312,24 @@
                 "en": "/jC0dqpkRMwh3A1X2PHahTxOaLbp.jpg",
                 "es": "/c8lxFlMxcWICptk9RYDyL8B1LHm.jpg",
                 "fr": "/mWd03gDfHhk72B859a28cbXih1z.jpg"
+            }
+        },
+        {
+            "id": 670,
+            "image": "img/oldboy.jpg",
+            "lang": "ko",
+            "names": {
+                "de": "Oldboy",
+                "en": "Oldboy",
+                "es": "Oldboy",
+                "fr": "Old Boy",
+                "original_title": "\uc62c\ub4dc\ubcf4\uc774"
+            },
+            "posters": {
+                "de": "/9ta0fcqLOn7qv2tEHyPbAnwpy8T.jpg",
+                "en": "/rIZX6X0MIHYEebk6W4LABT9VP2c.jpg",
+                "es": "/sX6mer0zscb6TAUWVTFl2m7bI0o.jpg",
+                "fr": "/if5bkQK6FxOQhKd9czd25HpdCCh.jpg"
             }
         }
     ]
